@@ -1,172 +1,119 @@
-:root {
-    --primary: #4CAF50;  /* Green */
-    --secondary: #8BC34A; /* Light Green */
-    --accent: #FFC107;    /* Amber */
-    --dark: #263238;      /* Dark Blue-Grey */
-    --light: #ECEFF1;     /* Light Blue-Grey */
+/* Projects Section */
+.projects-section {
+    padding: 6rem 10%;
 }
 
-/* Chatbot Styles */
-.chatbot-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 350px;
-    background: white;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
-    box-shadow: 0 5px 30px rgba(0,0,0,0.2);
-    transform: translateY(150%);
-    transition: transform 0.3s ease;
-    z-index: 1000;
-    display: flex;
-    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+    position: relative;
+    height: 200px;
     overflow: hidden;
 }
 
-.chatbot-container.active {
-    transform: translateY(0);
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
 }
 
-.chatbot-header {
-    background: var(--primary);
-    color: white;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.chatbot-close {
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-.chatbot-messages {
-    height: 300px;
-    padding: 15px;
-    overflow-y: auto;
-    background: #f5f5f5;
-}
-
-.chatbot-message {
-    max-width: 80%;
-    padding: 10px 15px;
-    margin-bottom: 10px;
-    border-radius: 18px;
-    line-height: 1.4;
-}
-
-.chatbot-message.bot {
-    background: white;
-    border-radius: 18px 18px 18px 0;
-    align-self: flex-start;
-}
-
-.chatbot-message.user {
-    background: var(--primary);
-    color: white;
-    border-radius: 18px 18px 0 18px;
-    align-self: flex-end;
-}
-
-.chatbot-input {
-    display: flex;
-    padding: 10px;
-    border-top: 1px solid #ddd;
-    background: white;
-}
-
-.chatbot-input input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    outline: none;
-}
-
-.chatbot-send {
-    background: var(--primary);
-    color: white;
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-left: 10px;
-    cursor: pointer;
-}
-
-.chatbot-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background: var(--primary);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    font-size: 24px;
-    cursor: pointer;
-    z-index: 999;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
-}
-
-.chatbot-toggle:hover {
+.project-card:hover .project-image img {
     transform: scale(1.1);
 }
 
-/* Updated Contact Section */
-.contact {
-    padding: 5rem 10%;
-    background: rgba(255,255,255,0.05);
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
-.contact-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 3rem;
-    margin-top: 2rem;
+.project-card:hover .project-overlay {
+    opacity: 1;
 }
 
-.contact-info {
-    background: rgba(255,255,255,0.1);
-    padding: 2rem;
-    border-radius: 10px;
+.project-link {
+    color: white;
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(65, 184, 131, 0.8);
+    transition: transform 0.3s;
 }
 
-.contact-info ul {
-    list-style: none;
+.project-link:hover {
+    transform: scale(1.2);
 }
 
-.contact-info li {
-    margin-bottom: 1.5rem;
+.project-details {
+    padding: 1.5rem;
+}
+
+.project-details h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: white;
+}
+
+.project-description {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1.2rem;
+    font-size: 0.95rem;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+}
+
+.project-tech span {
+    background: rgba(65, 184, 131, 0.1);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.3rem;
+    color: var(--accent);
 }
 
-.contact-form {
-    background: rgba(255,255,255,0.1);
-    padding: 2rem;
-    border-radius: 10px;
-    display: grid;
-    gap: 1.5rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 1rem;
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
-    color: white;
-    border-radius: 5px;
-}
-
-.contact-form textarea {
-    min-height: 150px;
-    resize: vertical;
+.project-tech i {
+    font-size: 0.9rem;
 }
