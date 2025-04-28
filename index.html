@@ -3,47 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name | Data Scientist</title>
+    <title>Weldon Langat | Data Scientist</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Weldon Langat Kipkurui</h1>
-            <h2>Data Scientist| Machine Learning Specialist</h2>
-            <nav>
-                <a href="index.html" class="active">Home</a>
-                <a href="projects.html">Projects</a>
-                <a href="resume.html">Resume</a>
-            </nav>
+    <!-- Animated Gradient Background -->
+    <div class="gradient-bg"></div>
+    
+    <!-- Glass Morphism Navigation -->
+    <nav class="glass-nav">
+        <div class="nav-brand">
+            <span class="logo-icon"><i class="fas fa-robot"></i></span>
+            <span class="logo-text">WeldonLangat</span>
         </div>
-    </header>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            <li><a href="#resume" class="nav-link"><i class="fas fa-file-alt"></i> Resume</a></li>
+            <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </nav>
 
-    <section id="about">
-        <div class="container">
-            <img src="images/your-photo.jpg" alt="Your Photo" class="profile-img">
-            <h3>About Me</h3>
-            <p>
-                Passionate data scientist with expertise in Python,R,SPSS,STATA,Excel,Sql,machine learning,AI 
-                and data visualization. I turn complex data into actionable insights.
+    <!-- Hero Section with ParticleJS -->
+    <section id="home" class="hero">
+        <div class="hero-content animate__animated animate__fadeIn">
+            <h1 class="hero-title">
+                <span class="text-gradient">Weldon Langat</span>
+            </h1>
+            <h2 class="hero-subtitle">Data Scientist | AI Engineer</h2>
+            <p class="hero-description">
+                Transforming raw data into intelligent solutions with Python, Machine Learning, and Cloud Technologies.
             </p>
-            <div class="skills">
-                <h4>Skills:</h4>
-                <span><i class="fab fa-python"></i> Python</span>
-                <span><i class="fas fa-database"></i> SQL</span>
-                <span><i class="fas fa-brain"></i> Machine Learning</span>
-                <span><i class="fas fa-chart-bar"></i> Data Visualization</span>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-eye"></i> View My Work
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-paper-plane"></i> Hire Me
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="profile-image-container">
+                <img src="images/profile.jpg" alt="Weldon Langat" class="profile-image">
+                <div class="tech-icons">
+                    <i class="fab fa-python"></i>
+                    <i class="fas fa-brain"></i>
+                    <i class="fas fa-cloud"></i>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <a href="mailto:langatweldon655@gmail.com"><i class="fas fa-envelope"></i> Email</a>
-            <a href="https://github.com/langat01"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://linkedin.com/in/weldonkip"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <!-- Animated Skills Bar -->
+    <section class="skills-section">
+        <h2 class="section-title">My Tech Stack</h2>
+        <div class="skills-container">
+            <div class="skill-item">
+                <div class="skill-info">
+                    <span>Python</span>
+                    <span>95%</span>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-progress python"></div>
+                </div>
+            </div>
+            <!-- Add more skills -->
         </div>
-    </footer>
+    </section>
 </body>
 </html>
