@@ -1,37 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Same head as index.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weldon Langat - Projects</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <!-- Same background/nav as index.html -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-    <section class="projects">
-        <h2><i class="fas fa-project-diagram"></i> Featured Projects</h2>
+    <div class="container">
+        <h1>My Projects</h1>
+        <p>Here are some of my recent data science and machine learning projects:</p>
         
         <div class="project-grid">
-            <!-- Project 1 -->
             <div class="project-card">
-                <div class="project-img">
-                    <img src="images/project1.jpg" alt="Customer Segmentation">
-                    <div class="project-links">
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
+                <img src="https://via.placeholder.com/300x180?text=Project+1" alt="Project 1">
                 <div class="project-info">
-                    <h3>Customer Segmentation</h3>
-                    <p>Used K-means clustering to identify customer groups</p>
-                    <div class="project-tech">
-                        <span>Python</span>
-                        <span>Scikit-learn</span>
-                        <span>Tableau</span>
-                    </div>
+                    <h3>Predictive Maintenance System</h3>
+                    <p>Machine learning model to predict equipment failures using sensor data.</p>
+                    <a href="#" class="btn">View Details</a>
                 </div>
             </div>
             
-            <!-- Add more projects -->
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x180?text=Project+2" alt="Project 2">
+                <div class="project-info">
+                    <h3>Customer Segmentation</h3>
+                    <p>Unsupervised learning to segment customers for targeted marketing.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x180?text=Project+3" alt="Project 3">
+                <div class="project-info">
+                    <h3>Sentiment Analysis Tool</h3>
+                    <p>NLP application to analyze customer reviews sentiment.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x180?text=Project+4" alt="Project 4">
+                <div class="project-info">
+                    <h3>Sales Forecasting</h3>
+                    <p>Time series analysis to predict future product demand.</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+
+    <!-- Same chatbot implementation as index.html -->
+    <div class="chatbot-toggler" onclick="toggleChatbot()">💬</div>
+    <div class="chatbot-container" id="chatbot">
+        <!-- Chatbot content same as index.html -->
+    </div>
+    
+    <script>
+        // Same JavaScript as index.html
+    </script>
 </body>
 </html>
