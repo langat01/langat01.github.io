@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weldon Langat | Data Scientist</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -15,47 +15,67 @@
     <!-- Navigation -->
     <nav class="glass-nav">
         <div class="logo">
-            <i class="fas fa-robot"></i> WeldonLangat
+            <span class="logo-icon"><i class="fas fa-robot"></i></span>
+            <span class="logo-text">WeldonLangat</span>
         </div>
-        <ul>
-            <li><a href="#home" class="active"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
-            <li><a href="#resume"><i class="fas fa-file-alt"></i> Resume</a></li>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="projects.html" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            <li><a href="resume.html" class="nav-link"><i class="fas fa-file-alt"></i> Resume</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-text">
-            <h1 class="gradient-text">Weldon Langat</h1>
-            <h2>Data Science Specialist</h2>
-            <p>Transforming data into actionable insights with AI/ML solutions</p>
-            <div class="hero-btns">
-                <a href="#projects" class="btn btn-primary">
-                    <i class="fas fa-eye"></i> View Work
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="text-gradient">Weldon Langat</span>
+            </h1>
+            <h2 class="hero-subtitle">Data Science Specialist</h2>
+            <p class="hero-description">
+                Transforming raw data into intelligent solutions with Python, Machine Learning, and Cloud Technologies.
+            </p>
+            <div class="hero-buttons">
+                <a href="projects.html" class="btn btn-primary">
+                    <i class="fas fa-eye"></i> View My Work
                 </a>
                 <a href="#contact" class="btn btn-secondary">
-                    <i class="fas fa-paper-plane"></i> Contact
+                    <i class="fas fa-paper-plane"></i> Contact Me
                 </a>
             </div>
         </div>
         <div class="hero-image">
-            <img src="images/profile.jpg" alt="Weldon Langat" class="profile-img">
+            <div class="profile-container">
+                <img src="images/profile.jpg" alt="Weldon Langat" class="profile-image">
+                <div class="tech-icons">
+                    <i class="fab fa-python"></i>
+                    <i class="fas fa-database"></i>
+                    <i class="fas fa-brain"></i>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section class="skills">
-        <h2><i class="fas fa-laptop-code"></i> Tech Stack</h2>
+    <section class="skills-section">
+        <h2 class="section-title"><i class="fas fa-laptop-code"></i> Technical Skills</h2>
         <div class="skills-grid">
-            <div class="skill-card">
-                <i class="fab fa-python"></i>
-                <h3>Python</h3>
-                <div class="skill-bar">
-                    <div class="skill-level" style="width: 95%"></div>
-                </div>
+            <div class="skill-category">
+                <h3>Data Science</h3>
+                <ul>
+                    <li><i class="fas fa-chart-line"></i> Predictive Modeling</li>
+                    <li><i class="fas fa-project-diagram"></i> Machine Learning</li>
+                    <li><i class="fas fa-language"></i> Natural Language Processing</li>
+                </ul>
             </div>
-            <!-- Add more skills -->
+            <div class="skill-category">
+                <h3>Technologies</h3>
+                <ul>
+                    <li><i class="fab fa-python"></i> Python</li>
+                    <li><i class="fas fa-database"></i> SQL</li>
+                    <li><i class="fab fa-aws"></i> AWS</li>
+                </ul>
+            </div>
         </div>
     </section>
 </body>
