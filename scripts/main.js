@@ -74,3 +74,26 @@ class Chatbot {
 document.addEventListener('DOMContentLoaded', () => {
     new Chatbot();
 });
+// Dark Mode Toggle
+const themeToggle = document.createElement('button');
+themeToggle.className = 'theme-toggle';
+themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+document.body.appendChild(themeToggle);
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const icon = themeToggle.querySelector('i');
+    if (document.body.classList.contains('dark-mode')) {
+        icon.classList.replace('fa-moon', 'fa-sun');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        icon.classList.replace('fa-sun', 'fa-moon');
+        localStorage.setItem('theme', 'light');
+    }
+});
+
+// Check saved preference
+if (localStorage.getItem('theme') === 'dark') {
+    document.body.classList.add('dark-mode');
+    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+}
