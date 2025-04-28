@@ -1,139 +1,83 @@
 :root {
-  --neon-blue: #00f5ff;
-  --cyber-purple: #8a2be2;
-  --dark-space: #0f0e17;
-  --matrix-green: #00ff41;
-  --electric-pink: #ff2a6d;
-  --pure-white: #ffffff;
-  --glass-effect: rgba(255, 255, 255, 0.1);
+  --deep-navy: #0a192f;
+  --slate: #8892b0;
+  --light-slate: #ccd6f6;
+  --white: #e6f1ff;
+  --accent: #64ffda;
 }
 
-/* Cyberpunk-inspired base */
 body {
-  font-family: 'Rajdhani', 'Orbitron', sans-serif;
-  background-color: var(--dark-space);
-  color: var(--pure-white);
-  line-height: 1.8;
+  font-family: 'Calibre', 'Inter', sans-serif;
+  background-color: var(--deep-navy);
+  color: var(--light-slate);
+  line-height: 1.6;
   margin: 0;
-  overflow-x: hidden;
 }
 
-/* Glow effects */
-.glow-text {
-  text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--cyber-purple);
-}
-
-/* Glassmorphism navigation */
+/* Elegant navigation */
 nav {
-  backdrop-filter: blur(10px);
-  background: var(--glass-effect);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(10, 25, 47, 0.9);
+  padding: 2rem 5%;
   position: fixed;
-  width: 100%;
-  z-index: 1000;
+  width: 90%;
+  z-index: 100;
 }
 
 nav ul {
   display: flex;
-  justify-content: center;
   gap: 2rem;
-  padding: 1.5rem;
+  list-style: none;
 }
 
 nav a {
-  color: var(--pure-white);
+  color: var(--white);
   text-decoration: none;
-  font-weight: 700;
-  letter-spacing: 1px;
-  transition: all 0.3s;
-  padding: 0.5rem 1rem;
-  border-radius: 50px;
+  font-size: 1.1rem;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-  background: var(--electric-pink);
-  color: var(--dark-space);
+  color: var(--accent);
 }
 
-/* Hero section with gradient mesh background */
+/* Hero section */
 .hero {
   min-height: 100vh;
+  padding: 15rem 10%;
   display: flex;
   align-items: center;
-  background: 
-    radial-gradient(circle at 10% 20%, var(--cyber-purple), transparent 70%),
-    radial-gradient(circle at 90% 80%, var(--neon-blue), transparent 70%),
-    var(--dark-space);
-  position: relative;
-  overflow: hidden;
 }
 
 .profile-photo {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--neon-blue);
-  box-shadow: 0 0 30px var(--neon-blue);
-  animation: float 6s ease-in-out infinite;
+  border: 2px solid var(--accent);
+  filter: grayscale(20%);
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+h1 {
+  font-size: 3.5rem;
+  color: var(--white);
+  margin-bottom: 1rem;
 }
 
-/* Cyber-style buttons */
-.btn {
-  background: linear-gradient(45deg, var(--electric-pink), var(--cyber-purple));
-  color: white;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 50px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.3s;
-  box-shadow: 0 5px 15px rgba(255, 42, 109, 0.4);
+h2 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 2rem;
 }
 
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(255, 42, 109, 0.6);
-}
-
-/* Holographic project cards */
+/* Project cards */
 .project-card {
-  background: rgba(15, 14, 23, 0.7);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(138, 43, 226, 0.3);
-  border-radius: 15px;
-  overflow: hidden;
-  transition: all 0.4s;
+  background: rgba(100, 255, 218, 0.03);
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  border-radius: 5px;
+  padding: 2rem;
+  transition: all 0.3s;
 }
 
 .project-card:hover {
-  transform: scale(1.03);
-  border-color: var(--neon-blue);
-  box-shadow: 0 0 30px rgba(0, 245, 255, 0.2);
-}
-
-/* Matrix-style chatbot */
-.chatbot-container {
-  background: rgba(15, 14, 23, 0.9);
-  border: 1px solid var(--matrix-green);
-  box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
-}
-
-.chatbot-header {
-  background: linear-gradient(90deg, var(--matrix-green), #003b00);
-}
-
-.user-message {
-  background: var(--matrix-green);
-  color: var(--dark-space);
-}
-
-/* Add these to <head> */
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Orbitron:wght@500&display=swap');
+  transform: translateY(-10px);
+  border-color: var(--accent);
