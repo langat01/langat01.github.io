@@ -1,71 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects - Weldon Langat</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Same head as index.html -->
 </head>
 <body>
-    <header>
-        <h1>Weldon Langat</h1>
-        <h2>Data Science Projects</h2>
-    </header>
-    
-    <main>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>Predictive Maintenance System</h3>
-                <p>Machine learning model that predicts equipment failures with 92% accuracy.</p>
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">TensorFlow</span>
-            </div>
-            
-            <div class="project-card">
-                <h3>Customer Churn Analysis</h3>
-                <p>Identified key factors driving customer attrition for telecom company.</p>
-                <span class="tech-tag">Pandas</span>
-                <span class="tech-tag">Scikit-learn</span>
-            </div>
-            
-            <div class="project-card">
-                <h3>Real-time Data Pipeline</h3>
-                <p>Cloud-based ETL pipeline processing 10K+ events per second.</p>
-                <span class="tech-tag">AWS</span>
-                <span class="tech-tag">Kafka</span>
-            </div>
-        </div>
-        
-        <div class="cta-buttons">
-            <a href="index.html">← Back to Home</a>
-            <button id="chatbot-launch">Ask AI About Projects</button>
-        </div>
-    </main>
+    <!-- Same background/nav as index.html -->
 
-    <!-- Same chatbot container as index.html -->
-    <div id="chatbot-container" class="hidden">
-        <div id="chatbot-header">
-            <span>Projects Assistant</span>
-            <button id="chatbot-close">×</button>
-        </div>
-        <div id="chatbot-body">
-            <div id="chat-messages">
-                <div class="message bot-message">
-                    I can explain any project in detail. Ask about:
-                    <ul>
-                        <li>Technical implementation</li>
-                        <li>Business impact</li>
-                        <li>Technologies used</li>
-                    </ul>
+    <section class="projects">
+        <h2><i class="fas fa-project-diagram"></i> Featured Projects</h2>
+        
+        <div class="project-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="images/project1.jpg" alt="Customer Segmentation">
+                    <div class="project-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Customer Segmentation</h3>
+                    <p>Used K-means clustering to identify customer groups</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Scikit-learn</span>
+                        <span>Tableau</span>
+                    </div>
                 </div>
             </div>
-            <div class="input-container">
-                <input type="text" id="chat-input" placeholder="Ask about a project...">
-                <button id="chat-send">Send</button>
-            </div>
+            
+            <!-- Add more projects -->
         </div>
-    </div>
-
-    <script src="chatbot.js"></script>
+    </section>
 </body>
 </html>
