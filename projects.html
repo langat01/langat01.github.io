@@ -3,34 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>My Projects | Weldon Langat</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav>...</nav> <!-- Same nav as index.html -->
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">WL</a>
+            <ul>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="theme-toggle"><i class="fas fa-moon"></i></button>
+        </div>
+    </nav>
 
     <section class="projects">
         <div class="container">
-            <h1 class="section-title">Featured Projects</h1>
+            <h1>My Projects</h1>
             
-            <div class="project-categories">
-                <button class="category-btn active" data-category="all">All</button>
-                <button class="category-btn" data-category="ml">Machine Learning</button>
-                <button class="category-btn" data-category="cloud">Cloud</button>
-                <button class="category-btn" data-category="analytics">Analytics</button>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ml">Machine Learning</button>
+                <button class="filter-btn" data-filter="cloud">Cloud</button>
+                <button class="filter-btn" data-filter="analytics">Analytics</button>
             </div>
 
             <div class="project-grid">
-                <!-- ML Project -->
                 <div class="project-card" data-category="ml">
                     <div class="project-image" style="background-image: url('https://via.placeholder.com/400x225?text=ML+Project');"></div>
                     <div class="project-info">
                         <h3>Predictive Maintenance</h3>
                         <p>ML model predicting equipment failures with 92% accuracy</p>
-                        <a href="#" class="btn">Case Study</a>
+                        <a href="#" class="btn">View Details</a>
                     </div>
                 </div>
 
-                <!-- Cloud Project -->
                 <div class="project-card" data-category="cloud">
                     <div class="project-image" style="background-image: url('https://via.placeholder.com/400x225?text=Cloud+Project');"></div>
                     <div class="project-info">
