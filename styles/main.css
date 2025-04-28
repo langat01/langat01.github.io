@@ -128,3 +128,27 @@ body.dark-mode .contact-form {
     justify-content: center;
     font-size: 1.2rem;
 }
+/* Add these transitions */
+.project-card {
+    transition: all 0.3s ease, transform 0.2s ease;
+}
+
+.btn {
+    transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Loading animation for AI */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+.bot-message::after {
+    content: "|";
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
