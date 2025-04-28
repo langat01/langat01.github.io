@@ -3,39 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weldon Langat - Data Science Specialist</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Weldon Langat | Data Science Specialist</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Weldon Langat</h1>
-        <h2>Data Science Specialist</h2>
-        <p>Transforming raw data into intelligent solutions with Python, Machine Learning, and Cloud Technologies.</p>
-        
-        <div class="buttons">
-            <a href="projects/data-science.html" class="btn">View My Work</a>
-            <a href="resume/experience.html" class="btn">View Resume</a>
-            <a href="#contact" class="btn">Contact Me</a>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">WL</a>
+            <ul>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </div>
-    </div>
+    </nav>
 
-    <!-- AI Assistant Button -->
-    <button id="aiAssistantBtn" class="ai-btn">
+    <section class="hero">
+        <div class="container">
+            <h1>Weldon Langat</h1>
+            <h2>Data Science Specialist</h2>
+            <p class="tagline">Transforming raw data into intelligent solutions with Python, Machine Learning, and Cloud Technologies.</p>
+            <div class="cta-buttons">
+                <a href="projects.html" class="btn primary">View Projects</a>
+                <a href="contact.html" class="btn secondary">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Assistant -->
+    <div class="chatbot-toggle" id="chatbotToggle">
         <i class="fas fa-robot"></i>
-    </button>
-
-    <!-- AI Chat Window (hidden by default) -->
-    <div id="aiChatWindow" class="ai-chat">
-        <div class="ai-header">
-            <h3>Data Science Assistant</h3>
-            <button id="closeChat">&times;</button>
+    </div>
+    <div class="chatbot-container" id="chatbotContainer">
+        <div class="chatbot-header">
+            <h3>DS Assistant</h3>
+            <button id="closeChatbot">&times;</button>
         </div>
-        <div id="chatMessages" class="ai-messages"></div>
-        <div class="ai-input">
-            <input type="text" id="userInput" placeholder="Ask about projects, resume...">
-            <button id="sendMessage"><i class="fas fa-paper-plane"></i></button>
+        <div class="chatbot-messages" id="chatbotMessages"></div>
+        <div class="chatbot-input">
+            <input type="text" id="chatbotInput" placeholder="Ask about my work...">
+            <button id="sendChatbotMessage"><i class="fas fa-paper-plane"></i></button>
         </div>
     </div>
 
-    <!-- Font
+    <script src="js/chatbot.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
