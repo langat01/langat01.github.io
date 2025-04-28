@@ -1,114 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Science Projects | Weldon Langat Kipkurui</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- New: Google Analytics snippet (optional) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YOURID"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-YOURID');
-    </script>
+    <!-- Same head as index.html -->
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Weldon Langat Kipkurui</h1>
-            <h2>Data Science Portfolio</h2>
-            <nav>
-                <a href="index.html"><i class="fas fa-home"></i> Home</a>
-                <a href="projects.html" class="active"><i class="fas fa-project-diagram"></i> Projects</a>
-                <a href="resume.html"><i class="fas fa-file-alt"></i> Resume</a>
-                <a href="https://github.com/langat01" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-            </nav>
-        </div>
-    </header>
+    <!-- Same background/nav as index.html -->
 
-    <section id="projects">
-        <div class="container">
-            <!-- Project 1 - Enhanced -->
+    <section class="projects">
+        <h2><i class="fas fa-project-diagram"></i> Featured Projects</h2>
+        
+        <div class="project-grid">
+            <!-- Project 1 -->
             <div class="project-card">
-                <div class="project-image-container">
-                    <img src="images/customer-segmentation.jpg" alt="Customer Segmentation Dashboard">
-                    <div class="image-overlay">
-                        <a href="https://github.com/langat01/customer-segmentation" class="btn-code">
-                            <i class="fab fa-github"></i> Code
-                        </a>
-                        <a href="https://demo-link.com" class="btn-demo">
-                            <i class="fas fa-external-link-alt"></i> Demo
-                        </a>
+                <div class="project-img">
+                    <img src="images/project1.jpg" alt="Customer Segmentation">
+                    <div class="project-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
-                <div class="project-details">
-                    <h3>Advanced Customer Segmentation</h3>
-                    <div class="project-meta">
-                        <span class="date"><i class="far fa-calendar-alt"></i> Jan 2023</span>
-                        <span class="duration"><i class="far fa-clock"></i> 3 weeks</span>
-                    </div>
-                    <p class="project-description">
-                        Developed a clustering model for a retail client that identified 5 distinct customer segments,
-                        leading to a 27% increase in campaign conversion rates. Implemented RFM analysis and
-                        dimensionality reduction with PCA.
-                    </p>
-                    <div class="tech-used">
-                        <span class="tech-tag"><i class="fab fa-python"></i> Python</span>
-                        <span class="tech-tag"><i class="fas fa-chart-line"></i> Scikit-learn</span>
-                        <span class="tech-tag"><i class="fas fa-database"></i> Pandas</span>
-                        <span class="tech-tag"><i class="fas fa-project-diagram"></i> PCA</span>
-                    </div>
-                    <div class="project-impact">
-                        <h4><i class="fas fa-trophy"></i> Key Impact:</h4>
-                        <ul>
-                            <li>27% increase in marketing campaign conversions</li>
-                            <li>Reduced customer acquisition cost by 18%</li>
-                            <li>Implemented as production API using Flask</li>
-                        </ul>
+                <div class="project-info">
+                    <h3>Customer Segmentation</h3>
+                    <p>Used K-means clustering to identify customer groups</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Scikit-learn</span>
+                        <span>Tableau</span>
                     </div>
                 </div>
             </div>
-
-            <!-- Project 2 - Enhanced -->
-            <div class="project-card">
-                <!-- Similar structure as Project 1 -->
-            </div>
-
-            <!-- Project Filters (Optional) -->
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">All Projects</button>
-                <button class="filter-btn" data-filter="machine-learning">Machine Learning</button>
-                <button class="filter-btn" data-filter="nlp">NLP</button>
-                <button class="filter-btn" data-filter="visualization">Visualization</button>
-            </div>
+            
+            <!-- Add more projects -->
         </div>
     </section>
-
-    <footer>
-        <div class="container">
-            <p>© 2023 Weldon Langat Kipkurui | Data Scientist</p>
-            <div class="social-links">
-                <a href="mailto:weldon@example.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://linkedin.com/in/weldon" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://kaggle.com/weldon" target="_blank"><i class="fab fa-kaggle"></i></a>
-                <a href="https://medium.com/@weldon" target="_blank"><i class="fab fa-medium"></i></a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JavaScript for interactive elements -->
-    <script>
-        // Project filter functionality
-        document.querySelectorAll('.filter-btn').forEach(button => {
-            button.addEventListener('click', () => {
-                // Filter logic would go here
-                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-            });
-        });
-    </script>
 </body>
 </html>
