@@ -1,84 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Weldon Langat</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #4b0082, #800080);
-      color: white;
-      padding: 2rem;
-    }
-    h1 {
-      text-align: center;
-      font-size: 2.5rem;
-      color: #00ffd5;
-    }
-    .projects {
-      max-width: 1000px;
-      margin: 2rem auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-    .project {
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 12px;
-      padding: 1.5rem;
-      transition: transform 0.3s;
-    }
-    .project:hover {
-      transform: scale(1.03);
-    }
-    .project h2 {
-      color: #00ff88;
-      margin-bottom: 0.5rem;
-    }
-    .project p {
-      font-size: 0.95rem;
-      color: #eee;
-    }
-    .project a {
-      display: inline-block;
-      margin-top: 0.75rem;
-      color: #00ffd5;
-      text-decoration: none;
-    }
-    .project a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>🧬 Projects</h1>
+  <header class="navbar">
+    <div class="logo">🤖 WeldonLangat</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="projects.html" class="active">🧬 Projects</a></li>
+        <li><a href="resume.html">📄 Resume</a></li>
+        <li><a href="contact.html">📨 Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="projects">
-    <div class="project">
-      <h2>Customer Churn Prediction</h2>
-      <p>Built a machine learning model to predict customer churn using logistic regression and decision trees, improving retention strategies.</p>
-      <a href="#">View Project</a>
+  <main class="project-section">
+    <h1>🧬 Projects</h1>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="images/project1.png" alt="Project 1">
+        <h3>Customer Churn Prediction</h3>
+        <p>Used machine learning models to predict customer churn with 85% accuracy.</p>
+      </div>
+      <div class="project-card">
+        <img src="images/project2.png" alt="Project 2">
+        <h3>Sales Forecasting Dashboard</h3>
+        <p>Interactive dashboard built using Power BI and Python to forecast sales trends.</p>
+      </div>
+      <div class="project-card">
+        <img src="images/project3.png" alt="Project 3">
+        <h3>Twitter Sentiment Analysis</h3>
+        <p>Analyzed tweets using NLP to assess brand sentiment across time and regions.</p>
+      </div>
     </div>
+  </main>
 
-    <div class="project">
-      <h2>Retail Sales Dashboard</h2>
-      <p>Developed an interactive Power BI dashboard that visualizes sales performance across regions and product categories.</p>
-      <a href="#">View Dashboard</a>
-    </div>
+  <footer>
+    <p>© 2025 Weldon Langat</p>
+  </footer>
 
-    <div class="project">
-      <h2>Twitter Sentiment Analyzer</h2>
-      <p>Used NLP techniques and Python to analyze sentiment trends in tweets related to major events and brands.</p>
-      <a href="#">View Code</a>
-    </div>
-
-    <div class="project">
-      <h2>Student Performance Predictor</h2>
-      <p>Created a model that predicts student academic outcomes using socioeconomic and behavioral data.</p>
-      <a href="#">View Notebook</a>
-    </div>
-  </div>
+  <script src="scripts.js"></script>
 </body>
 </html>
