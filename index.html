@@ -3,109 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weldon Langat | Home</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #4b0082, #800080);
-      color: white;
-      text-align: center;
-      padding: 4rem 1rem;
-    }
-    .logo {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    h1 {
-      font-size: 3rem;
-      background: linear-gradient(to right, #00ff88, #00ffd5);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 0.5rem;
-    }
-    h2 {
-      font-weight: normal;
-      font-size: 1.5rem;
-    }
-    p {
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin: 1rem auto 2rem;
-    }
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .btn {
-      padding: 0.75rem 1.5rem;
-      border: 2px solid #00ff88;
-      border-radius: 30px;
-      font-size: 1rem;
-      cursor: pointer;
-      background: none;
-      color: #00ff88;
-      transition: background 0.3s, color 0.3s;
-    }
-    .btn.filled {
-      background: #00ff88;
-      color: #4b0082;
-    }
-    .btn:hover {
-      background: #00ff88;
-      color: #4b0082;
-    }
-    .social {
-      margin-top: 2rem;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-    }
-    .social a {
-      color: white;
-      font-size: 1.5rem;
-      transition: color 0.3s;
-    }
-    .social a:hover {
-      color: #00ff88;
-    }
-    .icons {
-      margin-top: 3rem;
-      font-size: 2rem;
-      color: #00ff88;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-    }
-  </style>
+  <title>Weldon Langat | Data Science Specialist</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="logo"><i class="fas fa-robot"></i> WeldonLangat</div>
-  <h1>Weldon Langat</h1>
-  <h2>Data Science Specialist</h2>
-  <p>Transforming raw data into intelligent solutions with Python, Machine Learning, and Cloud Technologies.</p>
+  <header class="navbar">
+    <div class="logo">🤖 WeldonLangat</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="projects.html">🧬 Projects</a></li>
+        <li><a href="resume.html">📄 Resume</a></li>
+        <li><a href="contact.html">📨 Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="buttons">
-    <a href="projects.html" class="btn filled">✅ View My Work</a>
-    <a href="contact.html" class="btn">📨 Contact Me</a>
-  </div>
+  <main class="home-main">
+    <h1><span class="gradient-text">Weldon Langat</span></h1>
+    <h2>Data Science Specialist</h2>
+    <p class="tagline">Transforming raw data into intelligent solutions with Python, Machine Learning, and Cloud Technologies.</p>
+    <div class="cta-buttons">
+      <a class="btn primary" href="projects.html">✅ View My Work</a>
+      <a class="btn secondary" href="contact.html">📨 Contact Me</a>
+    </div>
+    <div class="tech-icons">
+      <span>🐍</span>
+      <span>🗄️</span>
+      <span>🧠</span>
+    </div>
+  </main>
 
-  <div class="social">
-    <a href="https://github.com/langat01" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="https://linkedin.com/in/weldonlangat" target="_blank"><i class="fab fa-linkedin"></i></a>
-  </div>
+  <footer>
+    <div class="social-links">
+      <a href="https://github.com/yourgithub" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/yourlinkedin" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
 
-  <div class="icons">
-    <i class="fab fa-python" title="Python"></i>
-    <i class="fas fa-database" title="Database"></i>
-    <i class="fas fa-brain" title="Machine Learning"></i>
-  </div>
+  <script src="scripts.js"></script>
 </body>
 </html>
