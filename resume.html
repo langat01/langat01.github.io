@@ -44,33 +44,25 @@
       font-size: 0.95rem;
       color: #ccc;
     }
-    .image-gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      margin-top: 2rem;
-    }
-    .image-gallery img {
-      width: 200px;
-      border-radius: 8px;
-      border: 2px solid #00ff88;
-    }
-    .download-resume {
+    .download-section {
       text-align: center;
       margin-top: 2rem;
     }
-    .download-resume a {
-      background: #00ff88;
-      color: #4b0082;
-      text-decoration: none;
+    .download-section a {
+      margin: 1rem;
+      display: inline-block;
       padding: 0.75rem 1.5rem;
-      border-radius: 25px;
+      background: #00ff88;
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
       font-weight: bold;
-      transition: background 0.3s;
     }
-    .download-resume a:hover {
-      background: #00ffd5;
+    .download-section img {
+      margin-top: 1rem;
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
     }
   </style>
 </head>
@@ -115,37 +107,21 @@
   </div>
 
   <div class="resume-section">
-    <h2>📜 Certificates</h2>
+    <h2>Certificates</h2>
     <ul>
-      <li>
-        <strong>IBM Data Science Professional Certificate</strong>
-        <span>Issued by IBM — 2024</span>
-        <a href="#">View Certificate</a>
-      </li>
-      <li>
-        <strong>Google Advanced Data Analytics</strong>
-        <span>Issued by Google — 2024</span>
-        <a href="#">View Certificate</a>
-      </li>
-      <li>
-        <strong>Machine Learning with Python</strong>
-        <span>Issued by Coursera — 2023</span>
-        <a href="#">View Certificate</a>
-      </li>
+      <li><strong>Google Data Analytics Professional Certificate</strong></li>
+      <li><strong>IBM Machine Learning Certificate</strong></li>
+      <li><strong>AWS Cloud Practitioner Essentials</strong></li>
     </ul>
   </div>
 
-  <div class="resume-section">
-    <h2>📸 Image Gallery</h2>
-    <div class="image-gallery">
-      <img src="images/project1.png" alt="Project Screenshot 1">
-      <img src="images/project2.png" alt="Project Screenshot 2">
-      <img src="images/project3.png" alt="Project Screenshot 3">
-    </div>
+  <div class="download-section">
+    <h2>📥 Download My Resume</h2>
+    <a href="files/WeldonLangat_Resume.pdf" download>Download PDF</a>
+    <a href="images/WeldonLangat_ResumeImage.jpg" target="_blank">View Image</a>
+    <br>
+    <img src="images/WeldonLangat_ResumeImage.jpg" alt="Resume Preview">
   </div>
 
-  <div class="download-resume">
-    <a href="files/WeldonLangat_Resume.pdf" download>⬇️ Download My Resume (PDF)</a>
-  </div>
 </body>
 </html>
