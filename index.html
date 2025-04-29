@@ -2,35 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- Critical viewport tag for mobile compatibility -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Weldon Langat | Data Scientist</title>
-    <!-- Preload important resources -->
-    <link rel="preload" href="styles/main.css" as="style">
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
-    <!-- Main CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weldon Langat - Data Science Specialist</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Favicon for all platforms -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <!-- iOS specific tags -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Background element -->
-    <div class="bg-texture"></div>
-    
-    <!-- Responsive header -->
-    <header id="main-header">
+    <header>
         <div class="logo">
             <i class="fas fa-robot"></i>
             <span>WeldonLangat</span>
         </div>
-        <button class="mobile-menu-btn" aria-label="Toggle menu">
-            <i class="fas fa-bars"></i>
-        </button>
-        <nav class="main-nav">
+        <nav>
             <ul>
                 <li><a href="index.html" class="active">🏠 Home</a></li>
                 <li><a href="projects.html">🧬 Projects</a></li>
@@ -42,22 +26,63 @@
     
     <main>
         <section class="hero">
-            <div class="profile-image">
-                <img src="images/profile.jpg" alt="Weldon Langat" 
-                     srcset="images/profile-small.jpg 480w, images/profile.jpg 1024w"
-                     sizes="(max-width: 600px) 480px, 800px">
-            </div>
             <h1>Weldon Langat</h1>
             <h2>Data Science Specialist</h2>
-            <p class="tagline">Transforming data into intelligent solutions</p>
+            <p class="tagline">Transforming raw data into intelligent solutions with Python, Machine Learning, and Cloud Technologies.</p>
             <div class="cta-buttons">
                 <a href="projects.html" class="btn-primary">✅ View My Work</a>
                 <a href="contact.html" class="btn-secondary">📨 Contact Me</a>
             </div>
+            <div class="skills-icons">
+                <a href="#" title="Python"><i class="fab fa-python"></i></a>
+                <a href="#" title="Database"><i class="fas fa-database"></i></a>
+                <a href="#" title="Machine Learning"><i class="fas fa-brain"></i></a>
+                <a href="https://github.com/yourusername" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </section>
+        
+        <section class="about">
+            <h3>About Me</h3>
+            <p>I'm a passionate data science professional with expertise in Python, machine learning algorithms, and cloud-based data solutions. I specialize in turning complex data into actionable insights that drive business decisions.</p>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h4>Data Science</h4>
+                    <ul>
+                        <li>Python (Pandas, NumPy, Scikit-learn)</li>
+                        <li>Machine Learning</li>
+                        <li>Data Visualization</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Cloud Technologies</h4>
+                    <ul>
+                        <li>AWS</li>
+                        <li>Google Cloud</li>
+                        <li>Azure</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Other Skills</h4>
+                    <ul>
+                        <li>SQL</li>
+                        <li>Big Data</li>
+                        <li>Data Pipelines</li>
+                    </ul>
+                </div>
+            </div>
         </section>
     </main>
-
-    <!-- Load JS at the end of body -->
-    <script src="scripts/main.js" defer></script>
+    
+    <footer>
+        <p>&copy; 2023 Weldon Langat. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </footer>
+    
+    <script src="scripts/main.js"></script>
 </body>
 </html>
