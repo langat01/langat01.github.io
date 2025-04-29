@@ -2,55 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Resume | Weldon Langat</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume - Weldon Langat</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <div class="container">
-            <a href="index.html" class="logo">WL</a>
+    <header>
+        <div class="logo">
+            <i class="fas fa-robot"></i>
+            <span>WeldonLangat</span>
+        </div>
+        <nav>
             <ul>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="projects.html"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                <li><a href="resume.html" class="active"><i class="fas fa-file-alt"></i> Resume</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
             </ul>
-            <button class="theme-toggle"><i class="fas fa-moon"></i></button>
-        </div>
-    </nav>
+        </nav>
+    </header>
 
-    <section class="resume">
-        <div class="container">
-            <div class="resume-header">
-                <h1>Weldon Langat</h1>
-                <p>Data Science Specialist</p>
-                <a href="#" class="btn download-btn">Download PDF</a>
-            </div>
-
-            <div class="resume-grid">
-                <div class="resume-section">
-                    <h2><i class="fas fa-briefcase"></i> Experience</h2>
-                    <div class="resume-item">
-                        <h3>Senior Data Scientist</h3>
-                        <p class="company">Tech independent data sincit. | 2020-Present</p>
-                        <ul>
-                            <li>Developed predictive models reducing costs by 18%</li>
-                            <li>Led team of 5 data Analysis </li>
-                        </ul>
-                    </div>
+    <main>
+        <section class="resume">
+            <h1 class="gradient-text">My Resume</h1>
+            
+            <div class="resume-section">
+                <h2>Experience</h2>
+                <div class="resume-item">
+                    <h3>Senior Data Scientist</h3>
+                    <p class="company">Tech Solutions Inc. | 2020 - Present</p>
+                    <ul>
+                        <li>Developed predictive models that increased customer retention by 25%</li>
+                        <li>Led a team of 5 data analysts to deliver insights for executive decision-making</li>
+                    </ul>
                 </div>
-
-                <div class="resume-section">
-                    <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-                    <div class="resume-item">
-                        <h3>MSc in Data Science</h3>
-                        <p class="institution">Murang'a university of technology | 2018</p>
-                    </div>
+                
+                <div class="resume-item">
+                    <h3>Data Analyst</h3>
+                    <p class="company">Data Insights Co. | 2017 - 2020</p>
+                    <ul>
+                        <li>Created automated reporting dashboards saving 20+ hours weekly</li>
+                        <li>Implemented data quality checks that reduced errors by 40%</li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
+            
+            <div class="resume-section">
+                <h2>Education</h2>
+                <div class="resume-item">
+                    <h3>MSc in Data Science</h3>
+                    <p class="company">University of Technology | 2015 - 2017</p>
+                </div>
+            </div>
+            
+            <div class="download-container">
+                <a href="#" class="btn primary">Download Full Resume (PDF)</a>
+            </div>
+        </section>
+    </main>
 
-    <script src="js/main.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
