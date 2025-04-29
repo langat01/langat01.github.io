@@ -1,49 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Weldon Langat</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #4b0082, #800080);
+      color: white;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #00ffd5;
+    }
+    .project {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1.5rem;
+      margin: 1rem auto;
+      border-radius: 12px;
+      max-width: 800px;
+    }
+    .project h2 {
+      color: #00ff88;
+    }
+    .project p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    a {
+      color: #00ffd5;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">🤖 WeldonLangat</div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="index.html">🏠 Home</a></li>
-        <li><a href="projects.html" class="active">🧬 Projects</a></li>
-        <li><a href="resume.html">📄 Resume</a></li>
-        <li><a href="contact.html">📨 Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <h1>🧬 Projects</h1>
 
-  <main class="project-section">
-    <h1>🧬 Projects</h1>
-    <div class="projects-grid">
-      <div class="project-card">
-        <img src="images/project1.png" alt="Project 1">
-        <h3>Customer Churn Prediction</h3>
-        <p>Used machine learning models to predict customer churn with 85% accuracy.</p>
-      </div>
-      <div class="project-card">
-        <img src="images/project2.png" alt="Project 2">
-        <h3>Sales Forecasting Dashboard</h3>
-        <p>Interactive dashboard built using Power BI and Python to forecast sales trends.</p>
-      </div>
-      <div class="project-card">
-        <img src="images/project3.png" alt="Project 3">
-        <h3>Twitter Sentiment Analysis</h3>
-        <p>Analyzed tweets using NLP to assess brand sentiment across time and regions.</p>
-      </div>
-    </div>
-  </main>
+  <div class="project">
+    <h2>Customer Churn Prediction</h2>
+    <p>Built using Python, XGBoost, and Pandas. This project predicts customer churn for a telecom company, helping to proactively retain at-risk customers.</p>
+    <p><a href="#">View Details</a></p>
+  </div>
 
-  <footer>
-    <p>© 2025 Weldon Langat</p>
-  </footer>
+  <div class="project">
+    <h2>Stock Market Dashboard</h2>
+    <p>Interactive dashboard created with Plotly Dash to visualize and analyze real-time stock market data and trends.</p>
+    <p><a href="#">View Details</a></p>
+  </div>
 
-  <script src="scripts.js"></script>
+  <div class="project">
+    <h2>NLP Chatbot for Healthcare</h2>
+    <p>Developed an AI chatbot using NLP models that provides preliminary healthcare advice and resources.</p>
+    <p><a href="#">View Details</a></p>
+  </div>
 </body>
 </html>
