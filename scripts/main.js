@@ -1,64 +1,82 @@
-// Dark Mode Toggle
-const themeToggle = document.querySelector('.theme-toggle');
-
-if (localStorage.getItem('theme') === 'dark') {
-  document.body.classList.add('dark-mode');
-  themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-}
-
-themeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('dark-mode');
-  const icon = themeToggle.querySelector('i');
-  
-  if (document.body.classList.contains('dark-mode')) {
-    icon.classList.replace('fa-moon', 'fa-sun');
-    localStorage.setItem('theme', 'dark');
-  } else {
-    icon.classList.replace('fa-sun', 'fa-moon');
-    localStorage.setItem('theme', 'light');
-  }
-});
-
-// 3D Card Tilt Effect
-document.querySelectorAll('.project-card').forEach(card => {
-  card.addEventListener('mousemove', (e) => {
-    const x = e.clientX - card.getBoundingClientRect().left;
-    const y = e.clientY - card.getBoundingClientRect().top;
-    const centerX = card.offsetWidth / 2;
-    const centerY = card.offsetHeight / 2;
-    const angleX = (y - centerY) / 20;
-    const angleY = (centerX - x) / 20;
+// Initialize chatbot
+document.addEventListener('DOMContentLoaded', function() {
+    const chatbotContainer = document.getElementById('chatbot-container');
+    const launchButtons = document.querySelectorAll('#chatbot-launch');
+    const closeButton = document.getElementById('chatbot-close');
+    const chatInput = document.getElementById('chat-input');
+    const chatSend = document.getElementById('chat-send');
+    const chatMessages = document.getElementById('chat-messages');
     
-    card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg)`;
-  });
-  
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
-  });
-});
-
-// Typing Animation
-function typeWriter(element, text, i = 0) {
-  if (i < text.length) {
-    element.innerHTML += text.charAt(i);
-    i++;
-    setTimeout(() => typeWriter(element, text, i), 100);
-  }
-}
-
-// Initialize when page loads
-document.addEventListener('DOMContentLoaded', () => {
-  // Typing effect
-  const tagline = document.querySelector('.tagline');
-  if (tagline) {
-    tagline.innerHTML = '';
-    typeWriter(tagline, tagline.textContent);
-  }
-  
-  // Initialize particle.js if on homepage
-  if (document.querySelector('.hero')) {
-    particlesJS("particles-js", {
-      /* Particle.js config from earlier */
+    // Launch chatbot
+    launchButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            chatbotContainer.classList.add('visible');
+        });
     });
-  }
+    
+    // Close chatbot
+    closeButton.addEventListener('click', function() {
+        chatbotContainer.classList.remove('visible');
+    });
+    
+    // Send message
+    function sendMessage() {
+        const message = chatInput.value.trim();
+        if (message) {
+            addMessage(message, 'user-message');
+            chatInput.value = '';
+            
+            // Simulate thinking delay
+            setTimeout(() => {
+                const response = generateResponse(message);
+                addMessage(response, 'bot-message');
+            }, 800);
+        }
+    }
+    
+    // Handle Enter key or Send button
+    chatInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') sendMessage();
+    });
+    
+    chatSend.addEventListener('click', sendMessage);
+    
+    // Add message to chat
+    function addMessage(text, className) {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add('message', className);
+        messageDiv.textContent = text;
+        chatMessages.appendChild(messageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+    
+    // Generate bot response
+    function generateResponse(message) {
+        const lowerMsg = message.toLowerCase();
+        
+        // Home page responses
+        if (document.querySelector('h2').textContent.includes('Data Science Specialist')) {
+            if (lowerMsg.includes('skill') || lowerMsg.includes('technology')) {
+                return "Weldon specializes in Python, Machine Learning (Scikit-learn, TensorFlow), Data Analysis (Pandas, NumPy), and Cloud Technologies (AWS, GCP).";
+            } else if (lowerMsg.includes('experience') || lowerMsg.includes('background')) {
+                return "With 5+ years in data science, Weldon has worked on predictive modeling, ETL pipelines, and business intelligence solutions across multiple industries.";
+            } else if (lowerMsg.includes('contact') || lowerMsg.includes('email') || lowerMsg.includes('reach')) {
+                return "You can contact Weldon directly at your-email@example.com for professional inquiries.";
+            }
+        }
+        
+        // Projects page responses
+        else if (document.querySelector('h2').textContent.includes('Projects')) {
+            if (lowerMsg.includes('predictive') || lowerMsg.includes('maintenance')) {
+                return "The Predictive Maintenance System uses sensor data with LSTM networks to forecast equipment failures 48 hours in advance, reducing downtime by 35%.";
+            } else if (lowerMsg.includes('churn')) {
+                return "The Customer Churn Analysis identified that contract length and support ticket frequency were key predictors, leading to a revised customer success strategy.";
+            } else if (lowerMsg.includes('pipeline') || lowerMsg.includes('real-time')) {
+                return "The Real-time Data Pipeline uses AWS Kinesis for ingestion, Lambda for processing, and Redshift for storage, handling 10K+ events/sec with <100ms latency.";
+            }
+        }
+        
+        // Default response
+        return "I can answer questions about Weldon's technical skills, project experience, or professional background. Try asking something more specific!";
+    }
 });
