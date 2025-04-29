@@ -1,36 +1,58 @@
-/* Responsive Styles for Mobile Devices */
+/* ===== Mobile View Fixes for Resume and Contact Sections ===== */
+
+/* For screens up to 768px (tablets and phones) */
 @media (max-width: 768px) {
-  /* Mobile Header Adjustments */
   header {
     padding: 1rem;
     flex-direction: column;
-    align-items: flex-start;
   }
 
   nav ul {
     margin-top: 1rem;
     flex-wrap: wrap;
     justify-content: center;
-    padding-left: 0;
   }
 
   nav ul li {
     margin: 0.5rem;
   }
 
-  /* Mobile Fixes for Resume and Contact Pages */
   .resume-main,
   .contact-main {
     padding: 2rem 1rem !important;
-    margin-top: 80px; /* Prevent overlap with fixed header */
+    margin-top: 80px; /* Adds space below fixed header */
+  }
+}
+
+/* For smaller screens (phones, 600px and below) */
+@media (max-width: 600px) {
+  /* Resume section adjustments */
+  .resume-section {
+    padding: 1rem;
   }
 
+  .skills-grid {
+    grid-template-columns: 1fr !important; /* Stack skills vertically */
+  }
+
+  .download-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Contact page adjustments */
   .contact-container {
-    grid-template-columns: 1fr; /* Stack contact form and info */
+    display: grid;
+    grid-template-columns: 1fr !important; /* Single column layout */
   }
 
-  .skills-container,
-  .projects-container {
-    grid-template-columns: 1fr; /* Better for narrow screens */
+  .contact-form,
+  .contact-info {
+    padding: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
   }
 }
