@@ -1,27 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Projects</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects | Weldon Langat</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/projects.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <a href="index.html" class="back-btn">← Home</a>
-    <h1>My Projects</h1>
-  </header>
-
-  <section class="projects">
-    <div class="project-card">
-      <h3>Project 1</h3>
-      <p>Description of your project.</p>
-    </div>
-    <!-- Add more projects -->
-  </section>
-
-  <footer>
-    <p>📧 <a href="mailto:you@example.com">you@example.com</a></p>
-  </footer>
+    <header>
+        <div class="logo">
+            <i class="fas fa-robot"></i>
+            <span>WeldonLangat</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="projects.html" class="active">🧬 Projects</a></li>
+                <li><a href="resume.html">📄 Resume</a></li>
+                <li><a href="contact.html">📨 Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="projects-main">
+        <h2 class="projects-title">My Projects</h2>
+        <div class="projects-container">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/project-screenshots/project1.jpg" alt="Predictive Maintenance System">
+                </div>
+                <div class="project-info">
+                    <h3>Predictive Maintenance System</h3>
+                    <p class="project-description">A machine learning model that predicts equipment failures before they occur, reducing downtime by 35%.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">AWS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/project-screenshots/project2.jpg" alt="Customer Segmentation Analysis">
+                </div>
+                <div class="project-info">
+                    <h3>Customer Segmentation Analysis</h3>
+                    <p class="project-description">Cluster analysis of customer data to identify distinct segments for targeted marketing campaigns.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">Tableau</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Case Study</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/project-screenshots/project3.jpg" alt="Real-time Data Pipeline">
+                </div>
+                <div class="project-info">
+                    <h3>Real-time Data Pipeline</h3>
+                    <p class="project-description">A cloud-based data pipeline that processes streaming data with 99.9% reliability.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">Kafka</span>
+                        <span class="tech-tag">Spark</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Architecture</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Weldon Langat. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </footer>
+    
+    <script src="scripts/main.js"></script>
 </body>
 </html>
