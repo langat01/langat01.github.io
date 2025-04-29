@@ -1,120 +1,117 @@
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+document.addEventListener('DOMContentLoaded', function() {
+    // Chatbot functionality
+    const chatbotToggle = document.getElementById('chatbot-toggle');
+    const chatbotWidget = document.getElementById('chatbot-widget');
+    const chatbotClose = document.getElementById('chatbot-close');
+    const chatbotInput = document.getElementById('chatbot-input');
+    const chatbotSend = document.getElementById('chatbot-send');
+    const chatbotMessages = document.getElementById('chatbot-messages');
+
+    // Toggle chatbot visibility
+    chatbotToggle.addEventListener('click', function() {
+        chatbotWidget.classList.toggle('active');
+    });
+
+    chatbotClose.addEventListener('click', function() {
+        chatbotWidget.classList.remove('active');
+    });
+
+    // Chatbot responses
+    const responses = {
+        "hello": "Hello there! How can I help you today?",
+        "hi": "Hi! I'm Weldon's AI assistant. What would you like to know?",
+        "projects": "You can view Weldon's projects in the Projects section. They include data science, machine learning, and cloud computing projects.",
+        "certifications": "Weldon has several professional certifications listed in the Certifications section, including from IBM, Stanford, and AWS.",
+        "contact": "You can reach Weldon through the Contact section or connect with him on LinkedIn and GitHub using the links above.",
+        "resume": "Weldon's professional experience and skills are detailed in the Resume section.",
+        "skills": "Weldon specializes in Python, Machine Learning, Data Analysis, and Cloud Technologies.",
+        "default": "I'm sorry, I didn't understand that. You can ask about Weldon's projects, certifications, skills, or how to contact him."
+    };
+
+    // Function to add a message to the chat
+    function addMessage(message, isUser = false) {
+        const messageDiv = document.createElement('div');
+        messageDiv.classList.add(isUser ? 'user-message' : 'bot-message');
+        messageDiv.textContent = message;
+        chatbotMessages.appendChild(messageDiv);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+
+    // Handle sending messages
+    function sendMessage() {
+        const message = chatbotInput.value.trim();
+        if (message) {
+            addMessage(message, true);
+            chatbotInput.value = '';
+            
+            // Simulate thinking delay
+            setTimeout(() => {
+                const lowerMessage = message.toLowerCase();
+                let response = responses.default;
+                
+                for (const key in responses) {
+                    if (lowerMessage.includes(key)) {
+                        response = responses[key];
+                        break;
+                    }
+                }
+                
+                addMessage(response);
+            }, 800);
+        }
+    }
+
+    // Send message on button click or Enter key
+    chatbotSend.addEventListener('click', sendMessage);
+    chatbotInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            sendMessage();
+        }
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                if (window.innerWidth <= 768) {
+                    const nav = document.querySelector('nav');
+                    nav.classList.remove('active');
+                }
+            }
         });
     });
+
+    // Mobile menu toggle (would need additional HTML/CSS)
+    const mobileMenuToggle = document.createElement('div');
+    mobileMenuToggle.className = 'mobile-menu-toggle';
+    mobileMenuToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    document.body.appendChild(mobileMenuToggle);
+
+    mobileMenuToggle.addEventListener('click', function() {
+        const nav = document.querySelector('nav');
+        nav.classList.toggle('active');
+    });
+
+    // View certificate buttons
+    document.querySelectorAll('.view-btn').forEach(button => {
+        button.addEventListener('click', function() {
+            // In a real implementation, this would open a modal or link to the certificate
+            alert('In a complete implementation, this would show the certificate details or verification page.');
+        });
+    });
+
+    // Add initial bot message
+    addMessage("Hello! I'm Weldon's AI assistant. How can I help you today?");
 });
-
-// Form submission handler
-const contactForm = document.querySelector('.contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Here you would typically send the form data to a server
-        alert('Thank you for your message! I will get back to you soon.');
-        this.reset();
-    });
-}
-
-// Active nav link highlighting
-const currentPage = location.pathname.split('/').pop();
-document.querySelectorAll('nav a').forEach(link => {
-    if (link.getAttribute('href') === currentPage) {
-        link.classList.add('active');
-    }
-});
-
-// Chatbot functionality
-const chatbotToggler = document.querySelector(".chatbot-toggler");
-const closeBtn = document.querySelector(".close-btn");
-const chatbox = document.querySelector(".chatbox");
-const chatInput = document.querySelector(".chat-input textarea");
-const sendChatBtn = document.querySelector(".chat-input span");
-
-let userMessage = null;
-const inputInitHeight = chatInput?.scrollHeight;
-
-const createChatLi = (message, className) => {
-    const chatLi = document.createElement("li");
-    chatLi.classList.add("chat", `${className}`);
-    let chatContent = className === "outgoing" ? `<p></p>` : `<span class="material-symbols-outlined">smart_toy</span><p></p>`;
-    chatLi.innerHTML = chatContent;
-    chatLi.querySelector("p").textContent = message;
-    return chatLi;
-}
-
-const handleChat = () => {
-    userMessage = chatInput.value.trim();
-    if(!userMessage) return;
-
-    chatInput.value = "";
-    chatInput.style.height = `${inputInitHeight}px`;
-
-    chatbox.appendChild(createChatLi(userMessage, "outgoing"));
-    chatbox.scrollTo(0, chatbox.scrollHeight);
-    
-    setTimeout(() => {
-        const incomingChatLi = createChatLi("Thinking...", "incoming");
-        chatbox.appendChild(incomingChatLi);
-        chatbox.scrollTo(0, chatbox.scrollHeight);
-        generateResponse(incomingChatLi);
-    }, 600);
-}
-
-const generateResponse = (chatElement) => {
-    const messageElement = chatElement.querySelector("p");
-    
-    // Simple responses - in a real app you'd use an API
-    const responses = {
-        "hello": "Hi there! How can I help you today?",
-        "hi": "Hello! What would you like to know about Weldon's work?",
-        "projects": "Weldon has worked on several data science projects including predictive analytics models and data visualization dashboards.",
-        "contact": "You can reach Weldon at weldon.langat@example.com or through the contact form on this website.",
-        "resume": "Weldon has a MSc in Data Science from Stanford University and experience as a Senior Data Scientist. You can view his full resume on the resume page."
-    };
-    
-    const defaultResponse = "I'm Weldon's AI assistant. I can tell you about his projects, experience, or how to contact him. What would you like to know?";
-    
-    const lowerMessage = userMessage.toLowerCase();
-    let response = defaultResponse;
-    
-    for (const [key, value] of Object.entries(responses)) {
-        if (lowerMessage.includes(key)) {
-            response = value;
-            break;
-        }
-    }
-    
-    setTimeout(() => {
-        messageElement.textContent = response;
-        chatbox.scrollTo(0, chatbox.scrollHeight);
-    }, 1000);
-}
-
-// Event listeners for chatbot
-if (chatbotToggler) {
-    chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
-}
-if (closeBtn) {
-    closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
-}
-if (sendChatBtn) {
-    sendChatBtn.addEventListener("click", handleChat);
-}
-if (chatInput) {
-    chatInput.addEventListener("input", () => {
-        chatInput.style.height = `${inputInitHeight}px`;
-        chatInput.style.height = `${chatInput.scrollHeight}px`;
-    });
-    chatInput.addEventListener("keydown", (e) => {
-        if(e.key === "Enter" && !e.shiftKey) {
-            e.preventDefault();
-            handleChat();
-        }
-    });
-}
