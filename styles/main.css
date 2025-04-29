@@ -614,3 +614,58 @@ main {
     resize: vertical;
     min-height: 120px;
 }
+/* My Work Section */
+.my-work {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.work-section {
+    margin-bottom: 3rem;
+}
+
+.project-highlight {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    background: rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.project-highlight img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.resume-highlight {
+    background: rgba(255,255,255,0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.btn-small {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .project-highlight {
+        flex-direction: column;
+    }
+    
+    .project-highlight img {
+        width: 100%;
+        height: auto;
+    }
+}
