@@ -2,56 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Projects | Weldon Langat</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects - Weldon Langat</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <div class="container">
-            <a href="index.html" class="logo">WL</a>
-            <ul>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <button class="theme-toggle"><i class="fas fa-moon"></i></button>
-        </div>
-    </nav>
-
-    <section class="projects">
-        <div class="container">
-            <h1>My Projects</h1>
+    <header>
+        <h1>Weldon Langat</h1>
+        <h2>Data Science Projects</h2>
+    </header>
+    
+    <main>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Predictive Maintenance System</h3>
+                <p>Machine learning model that predicts equipment failures with 92% accuracy.</p>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">TensorFlow</span>
+            </div>
             
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="ml">Machine Learning</button>
-                <button class="filter-btn" data-filter="cloud">Cloud</button>
-                <button class="filter-btn" data-filter="analytics">Analytics</button>
+            <div class="project-card">
+                <h3>Customer Churn Analysis</h3>
+                <p>Identified key factors driving customer attrition for telecom company.</p>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">Scikit-learn</span>
             </div>
-
-            <div class="project-grid">
-                <div class="project-card" data-category="ml">
-                    <div class="project-image" style="background-image: url('https://via.placeholder.com/400x225?text=ML+Project');"></div>
-                    <div class="project-info">
-                        <h3>Predictive Maintenance</h3>
-                        <p>ML model predicting equipment failures with 92% accuracy</p>
-                        <a href="#" class="btn">View Details</a>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="cloud">
-                    <div class="project-image" style="background-image: url('https://via.placeholder.com/400x225?text=Cloud+Project');"></div>
-                    <div class="project-info">
-                        <h3>Cloud Data Pipeline</h3>
-                        <p>Real-time ETL pipeline processing 1M+ records daily</p>
-                        <a href="#" class="btn">View Details</a>
-                    </div>
-                </div>
+            
+            <div class="project-card">
+                <h3>Real-time Data Pipeline</h3>
+                <p>Cloud-based ETL pipeline processing 10K+ events per second.</p>
+                <span class="tech-tag">AWS</span>
+                <span class="tech-tag">Kafka</span>
             </div>
         </div>
-    </section>
+        
+        <div class="cta-buttons">
+            <a href="index.html">← Back to Home</a>
+            <button id="chatbot-launch">Ask AI About Projects</button>
+        </div>
+    </main>
 
-    <script src="js/main.js"></script>
+    <!-- Same chatbot container as index.html -->
+    <div id="chatbot-container" class="hidden">
+        <div id="chatbot-header">
+            <span>Projects Assistant</span>
+            <button id="chatbot-close">×</button>
+        </div>
+        <div id="chatbot-body">
+            <div id="chat-messages">
+                <div class="message bot-message">
+                    I can explain any project in detail. Ask about:
+                    <ul>
+                        <li>Technical implementation</li>
+                        <li>Business impact</li>
+                        <li>Technologies used</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="input-container">
+                <input type="text" id="chat-input" placeholder="Ask about a project...">
+                <button id="chat-send">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="chatbot.js"></script>
 </body>
 </html>
