@@ -1,23 +1,30 @@
-# langat01.github.io
-# Weldon Langat - Data Science Portfolio
+# Weldon Langat - Personal Portfolio
 
-[![Live Demo](https://img.shields.io/badge/View-Live_Demo-green?style=for-the-badge)](https://langat01.github.io)
+![Portfolio Screenshot](./screenshot.png)
 
-Modern portfolio showcasing data science projects with interactive chatbot.
+This is my personal portfolio website showcasing my work as a Data Science Specialist.
 
 ## Features
-- 🚀 **Interactive Chatbot** - AI assistant for visitors
-- 📊 **Project Showcase** - Filterable project gallery
-- 📱 **Fully Responsive** - Mobile-friendly design
-- ✨ **Visual Effects** - Animations & glassmorphism
 
-## Quick Setup
-1. Replace placeholder content in:
-   - `index.html` (Homepage)
-   - `projects.html` (Your projects)
-   - `resume.html` (Your experience)
+- Responsive design that works on all devices
+- Modern UI with gradient effects
+- Project showcase section
+- Interactive contact form
+- Downloadable resume
 
-2. Add your images to `/images`:
-   ```bash
-   /images/profile.jpg          # Your professional photo
-   /images/projects/project1.jpg # Project screenshots
+## Technologies Used
+
+- HTML5
+- CSS3 (with CSS variables)
+- JavaScript (for basic interactivity)
+- Font Awesome icons
+
+## How to Use
+
+1. Clone this repository
+2. Open `index.html` in your browser
+3. Navigate through the different sections using the menu
+
+## License
+
+This project is open source and available under the MIT License.
