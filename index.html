@@ -3,102 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weldon Langat | Data Science Specialist</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+    <title>Weldon Langat - Data Science Specialist</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="container">
-            <a href="index.html" class="logo">WL</a>
-            <ul>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <button class="theme-toggle"><i class="fas fa-moon"></i></button>
-        </div>
-    </nav>
-
-    <!-- Hero Section with Particles -->
-    <section class="hero">
-        <div id="particles-js"></div>
-        <div class="container">
-            <!-- Animated Avatar -->
-            <div class="avatar-container">
-                <div class="avatar-border"></div>
-                <img src="images/profile.jpg" alt="Weldon Langat" class="profile-photo">
-            </div>
-            
-            <h1>Weldon Langat</h1>
-            <h2>Data Science Specialist</h2>
-            <p class="tagline">Transforming raw data into intelligent solutions with Python, Machine Learning, and Cloud Technologies.</p>
-            
-            <div class="cta-buttons">
-                <a href="projects.html" class="btn">View Projects</a>
-                <a href="contact.html" class="btn secondary">Contact Me</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- AI Chatbot Toggle -->
-    <div class="chatbot-toggle" id="chatbotToggle">
-        <i class="fas fa-robot"></i>
-    </div>
+    <header>
+        <h1>Weldon Langat</h1>
+        <h2>Data Science Specialist</h2>
+    </header>
     
-    <!-- Chatbot Container -->
-    <div class="chatbot-container" id="chatbotContainer">
-        <div class="chatbot-header">
-            <h3>DS Assistant</h3>
-            <button id="closeChatbot">&times;</button>
+    <main>
+        <p>Transforming raw data into intelligent solutions with Python, Machine Learning, and Cloud Technologies.</p>
+        
+        <div class="cta-buttons">
+            <a href="projects.html">View My Work</a>
+            <a href="mailto:your-email@example.com">Contact Me</a>
+            <button id="chatbot-launch">Chat with My AI</button>
         </div>
-        <div class="chatbot-messages" id="chatbotMessages"></div>
-        <div class="chatbot-input">
-            <input type="text" id="chatbotInput" placeholder="Ask about my work...">
-            <button id="sendChatbotMessage"><i class="fas fa-paper-plane"></i></button>
+    </main>
+
+    <div id="chatbot-container" class="hidden">
+        <div id="chatbot-header">
+            <span>AI Assistant</span>
+            <button id="chatbot-close">×</button>
+        </div>
+        <div id="chatbot-body">
+            <div id="chat-messages">
+                <div class="message bot-message">
+                    Hello! I'm Weldon's AI assistant. Ask me about:
+                    <ul>
+                        <li>Technical skills</li>
+                        <li>Project experience</li>
+                        <li>Data science methods</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="input-container">
+                <input type="text" id="chat-input" placeholder="Ask about my work...">
+                <button id="chat-send">Send</button>
+            </div>
         </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/chatbot.js"></script>
-    
-    <!-- Particle.js Configuration -->
-    <script>
-        particlesJS("particles-js", {
-            "particles": {
-                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
-                "color": { "value": "#ffffff" },
-                "shape": { "type": "circle" },
-                "opacity": { "value": 0.5, "random": true },
-                "size": { "value": 3, "random": true },
-                "line_linked": { 
-                    "enable": true, 
-                    "distance": 150, 
-                    "color": "#ffffff", 
-                    "opacity": 0.4, 
-                    "width": 1 
-                },
-                "move": { 
-                    "enable": true, 
-                    "speed": 2, 
-                    "direction": "none", 
-                    "random": true, 
-                    "straight": false, 
-                    "out_mode": "out" 
-                }
-            },
-            "interactivity": {
-                "detect_on": "canvas",
-                "events": {
-                    "onhover": { "enable": true, "mode": "repulse" },
-                    "onclick": { "enable": true, "mode": "push" }
-                }
-            }
-        });
-    </script>
+    <script src="chatbot.js"></script>
 </body>
 </html>
