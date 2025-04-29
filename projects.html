@@ -1,80 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects - Weldon Langat</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Weldon Langat</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #4b0082, #800080);
+      color: white;
+      padding: 2rem;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #00ffd5;
+    }
+    .project {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1.5rem;
+      margin: 1rem auto;
+      border-radius: 12px;
+      max-width: 800px;
+    }
+    .project h2 {
+      color: #00ff88;
+    }
+    .project p {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    a {
+      color: #00ffd5;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <i class="fas fa-robot"></i>
-            <span>WeldonLangat</span>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="projects.html" class="active"><i class="fas fa-project-diagram"></i> Projects</a></li>
-                <li><a href="resume.html"><i class="fas fa-file-alt"></i> Resume</a></li>
-                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <h1>🧬 Projects</h1>
 
-    <main>
-        <section class="projects">
-            <h1 class="gradient-text">My Projects</h1>
-            
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Predictive Analytics Model</h3>
-                    <p>A machine learning model that predicts customer churn with 92% accuracy.</p>
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Scikit-learn</span>
-                </div>
-                
-                <div class="project-card">
-                    <h3>Data Visualization Dashboard</h3>
-                    <p>Interactive dashboard for exploring large datasets with real-time filtering.</p>
-                    <span class="tech-tag">Tableau</span>
-                    <span class="tech-tag">D3.js</span>
-                </div>
-                
-                <div class="project-card">
-                    <h3>Cloud Data Pipeline</h3>
-                    <p>Automated ETL pipeline processing TBs of data daily on AWS infrastructure.</p>
-                    <span class="tech-tag">AWS</span>
-                    <span class="tech-tag">Spark</span>
-                </div>
-            </div>
-        </section>
-    </main>
+  <div class="project">
+    <h2>Customer Churn Prediction</h2>
+    <p>Built using Python, XGBoost, and Pandas. This project predicts customer churn for a telecom company, helping to proactively retain at-risk customers.</p>
+    <p><a href="#">View Details</a></p>
+  </div>
 
-    <!-- Chatbot -->
-    <button class="chatbot-toggler">
-        <span class="material-symbols-outlined">mode_comment</span>
-        <span class="material-symbols-outlined">close</span>
-    </button>
-    <div class="chatbot">
-        <header>
-            <h2>Weldon's Assistant</h2>
-            <span class="close-btn material-symbols-outlined">close</span>
-        </header>
-        <ul class="chatbox">
-            <li class="chat incoming">
-                <span class="material-symbols-outlined">smart_toy</span>
-                <p>Hi there! 👋<br>I'm Weldon's AI assistant. How can I help you today?</p>
-            </li>
-        </ul>
-        <div class="chat-input">
-            <textarea placeholder="Ask me anything..." required></textarea>
-            <span class="material-symbols-outlined">send</span>
-        </div>
-    </div>
+  <div class="project">
+    <h2>Stock Market Dashboard</h2>
+    <p>Interactive dashboard created with Plotly Dash to visualize and analyze real-time stock market data and trends.</p>
+    <p><a href="#">View Details</a></p>
+  </div>
 
-    <script src="scripts/main.js"></script>
+  <div class="project">
+    <h2>NLP Chatbot for Healthcare</h2>
+    <p>Developed an AI chatbot using NLP models that provides preliminary healthcare advice and resources.</p>
+    <p><a href="#">View Details</a></p>
+  </div>
 </body>
 </html>
