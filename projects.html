@@ -1,65 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | Weldon Langat</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #4b0082, #800080);
-      color: white;
-      padding: 2rem;
-    }
-    h1 {
-      text-align: center;
-      font-size: 2.5rem;
-      color: #00ffd5;
-    }
-    .project {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 1.5rem;
-      margin: 1rem auto;
-      border-radius: 12px;
-      max-width: 800px;
-    }
-    .project h2 {
-      color: #00ff88;
-    }
-    .project p {
-      font-size: 1rem;
-      line-height: 1.5;
-    }
-    a {
-      color: #00ffd5;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Projects</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>🧬 Projects</h1>
+  <header>
+    <a href="index.html" class="back-btn">← Home</a>
+    <h1>My Projects</h1>
+  </header>
 
-  <div class="project">
-    <h2>Customer Churn Prediction</h2>
-    <p>Built using Python, XGBoost, and Pandas. This project predicts customer churn for a telecom company, helping to proactively retain at-risk customers.</p>
-    <p><a href="#">View Details</a></p>
-  </div>
+  <section class="projects">
+    <div class="project-card">
+      <h3>Project 1</h3>
+      <p>Description of your project.</p>
+    </div>
+    <!-- Add more projects -->
+  </section>
 
-  <div class="project">
-    <h2>Stock Market Dashboard</h2>
-    <p>Interactive dashboard created with Plotly Dash to visualize and analyze real-time stock market data and trends.</p>
-    <p><a href="#">View Details</a></p>
-  </div>
-
-  <div class="project">
-    <h2>NLP Chatbot for Healthcare</h2>
-    <p>Developed an AI chatbot using NLP models that provides preliminary healthcare advice and resources.</p>
-    <p><a href="#">View Details</a></p>
-  </div>
+  <footer>
+    <p>📧 <a href="mailto:you@example.com">you@example.com</a></p>
+  </footer>
 </body>
 </html>
