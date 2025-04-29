@@ -1,24 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Resume</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume | Weldon Langat</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <a href="index.html" class="back-btn">← Home</a>
-    <h1>My Resume</h1>
-  </header>
-
-  <section class="resume">
-    <embed src="images/resume.pdf" width="100%" height="500px" type="application/pdf">
-    <a href="images/resume.pdf" download class="btn">Download Resume (PDF)</a>
-  </section>
-
-  <footer>
-    <p>📞 <a href="tel:+1234567890">+1 (234) 567-890</a></p>
-  </footer>
+    <header>
+        <div class="logo">
+            <i class="fas fa-robot"></i>
+            <span>WeldonLangat</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="projects.html">🧬 Projects</a></li>
+                <li><a href="resume.html" class="active">📄 Resume</a></li>
+                <li><a href="contact.html">📨 Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="resume-main">
+        <div class="resume-header">
+            <h2>Weldon Langat</h2>
+            <p class="resume-title">Data Science Specialist</p>
+            <a href="path/to/your-resume.pdf" download class="download-btn">
+                <i class="fas fa-download"></i> Download Resume (PDF)
+            </a>
+        </div>
+        
+        <div class="resume-content">
+            <section class="resume-section">
+                <h3><i class="fas fa-user-tie"></i> Professional Summary</h3>
+                <p>Data Science professional with 5+ years of experience in developing machine learning models, building data pipelines, and creating data-driven solutions. Strong expertise in Python, cloud technologies, and transforming complex data into actionable insights.</p>
+            </section>
+            
+            <section class="resume-section">
+                <h3><i class="fas fa-briefcase"></i> Work Experience</h3>
+                <div class="experience-item">
+                    <h4>Senior Data Scientist</h4>
+                    <p class="company">Tech Solutions Inc. | Jan 2020 - Present</p>
+                    <ul>
+                        <li>Developed predictive models that improved business decision-making by 40%</li>
+                        <li>Led a team of 5 data scientists to implement machine learning solutions</li>
+                        <li>Designed and deployed scalable data pipelines on AWS</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <h4>Data Analyst</h4>
+                    <p class="company">Data Insights Co. | Jun 2017 - Dec 2019</p>
+                    <ul>
+                        <li>Created dashboards and reports that identified $2M in cost savings</li>
+                        <li>Automated data collection processes, reducing manual work by 70%</li>
+                        <li>Performed statistical analysis to uncover key business trends</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <section class="resume-section">
+                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                <div class="education-item">
+                    <h4>MSc in Data Science</h4>
+                    <p class="institution">University of Technology | 2015 - 2017</p>
+                </div>
+                <div class="education-item">
+                    <h4>BSc in Computer Science</h4>
+                    <p class="institution">State University | 2011 - 2015</p>
+                </div>
+            </section>
+            
+            <section class="resume-section">
+                <h3><i class="fas fa-code"></i> Technical Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Programming</h4>
+                        <ul>
+                            <li>Python (Pandas, NumPy, Scikit-learn)</li>
+                            <li>SQL</li>
+                            <li>R</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Machine Learning</h4>
+                        <ul>
+                            <li>Supervised Learning</li>
+                            <li>Deep Learning</li>
+                            <li>Natural Language Processing</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Tools & Platforms</h4>
+                        <ul>
+                            <li>AWS</li>
+                            <li>Google Cloud</li>
+                            <li>Tableau</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="resume-section">
+                <h3><i class="fas fa-certificate"></i> Certifications</h3>
+                <ul class="certifications-list">
+                    <li>AWS Certified Data Analytics - Specialty</li>
+                    <li>Google Professional Data Engineer</li>
+                    <li>Microsoft Certified: Azure Data Scientist Associate</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Weldon Langat. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/yourusername" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:your.email@example.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </footer>
+    
+    <script src="scripts/main.js"></script>
 </body>
 </html>
