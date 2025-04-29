@@ -125,5 +125,21 @@
     </footer>
     
     <script src="scripts/main.js"></script>
+    <script>
+function openTab(tabName) {
+    // Hide all tab contents
+    const tabContents = document.querySelectorAll('.tab-content');
+    tabContents.forEach(content => content.style.display = 'none');
+
+    // Remove 'active' class from all tab buttons
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    tabButtons.forEach(button => button.classList.remove('active'));
+
+    // Show selected tab and highlight its button
+    document.getElementById(tabName).style.display = 'block';
+    document.querySelector(`[onclick="openTab('${tabName}')"]`).classList.add('active');
+}
+</script>
+
 </body>
 </html>
