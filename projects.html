@@ -4,11 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Weldon Langat</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(to right, #4b0082, #800080);
       color: white;
       padding: 2rem;
@@ -18,25 +17,37 @@
       font-size: 2.5rem;
       color: #00ffd5;
     }
+    .projects {
+      max-width: 1000px;
+      margin: 2rem auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
     .project {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 1.5rem;
-      margin: 1rem auto;
+      background-color: rgba(255, 255, 255, 0.1);
       border-radius: 12px;
-      max-width: 800px;
+      padding: 1.5rem;
+      transition: transform 0.3s;
+    }
+    .project:hover {
+      transform: scale(1.03);
     }
     .project h2 {
       color: #00ff88;
+      margin-bottom: 0.5rem;
     }
     .project p {
-      font-size: 1rem;
-      line-height: 1.5;
+      font-size: 0.95rem;
+      color: #eee;
     }
-    a {
+    .project a {
+      display: inline-block;
+      margin-top: 0.75rem;
       color: #00ffd5;
       text-decoration: none;
     }
-    a:hover {
+    .project a:hover {
       text-decoration: underline;
     }
   </style>
@@ -44,22 +55,30 @@
 <body>
   <h1>🧬 Projects</h1>
 
-  <div class="project">
-    <h2>Customer Churn Prediction</h2>
-    <p>Built using Python, XGBoost, and Pandas. This project predicts customer churn for a telecom company, helping to proactively retain at-risk customers.</p>
-    <p><a href="#">View Details</a></p>
-  </div>
+  <div class="projects">
+    <div class="project">
+      <h2>Customer Churn Prediction</h2>
+      <p>Built a machine learning model to predict customer churn using logistic regression and decision trees, improving retention strategies.</p>
+      <a href="#">View Project</a>
+    </div>
 
-  <div class="project">
-    <h2>Stock Market Dashboard</h2>
-    <p>Interactive dashboard created with Plotly Dash to visualize and analyze real-time stock market data and trends.</p>
-    <p><a href="#">View Details</a></p>
-  </div>
+    <div class="project">
+      <h2>Retail Sales Dashboard</h2>
+      <p>Developed an interactive Power BI dashboard that visualizes sales performance across regions and product categories.</p>
+      <a href="#">View Dashboard</a>
+    </div>
 
-  <div class="project">
-    <h2>NLP Chatbot for Healthcare</h2>
-    <p>Developed an AI chatbot using NLP models that provides preliminary healthcare advice and resources.</p>
-    <p><a href="#">View Details</a></p>
+    <div class="project">
+      <h2>Twitter Sentiment Analyzer</h2>
+      <p>Used NLP techniques and Python to analyze sentiment trends in tweets related to major events and brands.</p>
+      <a href="#">View Code</a>
+    </div>
+
+    <div class="project">
+      <h2>Student Performance Predictor</h2>
+      <p>Created a model that predicts student academic outcomes using socioeconomic and behavioral data.</p>
+      <a href="#">View Notebook</a>
+    </div>
   </div>
 </body>
 </html>
