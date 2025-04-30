@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/projects.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -29,15 +28,16 @@
         <h2 class="projects-title">My Projects</h2>
         <div class="projects-container">
 
-            <!-- Project 1 - Predictive Maintenance -->
+            <!-- Project 1 -->
             <div class="project-card">
                 <div class="project-image">
+                    <!-- Verify this image exists in your repository -->
                     <img src="images/project-screenshots/project1.jpg" alt="Predictive Maintenance System">
                 </div>
                 <div class="project-info">
                     <h3>Predictive Maintenance System</h3>
                     <p class="project-description">
-                        A machine learning model that predicts equipment failures before they occur, reducing downtime by 15%.
+                        A machine learning model that predicts equipment failures before they occur.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">Python</span>
@@ -45,119 +45,93 @@
                         <span class="tech-tag">Streamlit</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/langat01/predictive-maintenance/blob/main/yes.py" 
+                        <!-- CHANGED: Direct link to your Python file -->
+                        <a href="https://github.com/langat01/langat01.github.io/blob/main/projects/predictive-maintenance/yes.py" 
                            class="project-link" 
-                           target="_blank"
-                           aria-label="View Predictive Maintenance Code">
+                           target="_blank">
                             <i class="fab fa-github"></i> Code
                         </a>
+                        <!-- Keep your working Streamlit link -->
                         <a href="https://langat01-turbofan-predictive-maintenance.streamlit.app" 
                            class="project-link" 
-                           target="_blank"
-                           aria-label="Try Predictive Maintenance Demo">
+                           target="_blank">
                             <i class="fas fa-external-link-alt"></i> Live Demo
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 2 - Customer Segmentation -->
+            <!-- Project 2 -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="images/project-screenshots/project2.jpg" alt="Customer Segmentation Analysis">
+                    <img src="images/project-screenshots/project2.jpg" alt="Customer Segmentation">
                 </div>
                 <div class="project-info">
                     <h3>Customer Segmentation Analysis</h3>
-                    <p class="project-description">
-                        Cluster analysis of customer data to identify distinct segments for targeted marketing campaigns.
-                    </p>
+                    <p class="project-description">Cluster analysis of customer data for targeted marketing.</p>
                     <div class="project-tech">
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">Scikit-learn</span>
                         <span class="tech-tag">Tableau</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/langat01/customer-segmentation" 
+                        <!-- CHANGED: Direct link to your repository -->
+                        <a href="https://github.com/langat01/langat01.github.io/tree/main/projects/customer-segmentation" 
                            class="project-link" 
-                           target="_blank"
-                           aria-label="View Customer Segmentation Code">
+                           target="_blank">
                             <i class="fab fa-github"></i> Code
                         </a>
-                        <a href="pdf/customer-segmentation-case.pdf" 
+                        <!-- CHANGED: PDF in your repository's pdf folder -->
+                        <a href="https://langat01.github.io/pdf/customer-segmentation-case.pdf" 
                            class="project-link" 
-                           download="Weldon_Customer_Segmentation_Case.pdf"
-                           aria-label="Download Case Study">
+                           download>
                             <i class="fas fa-file-pdf"></i> Case Study
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- Project 3 - Data Pipeline -->
+            <!-- Project 3 -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="images/project-screenshots/project3.jpg" alt="Real-time Data Pipeline">
+                    <img src="images/project-screenshots/project3.jpg" alt="Data Pipeline">
                 </div>
                 <div class="project-info">
                     <h3>Real-time Data Pipeline</h3>
-                    <p class="project-description">
-                        A cloud-based data pipeline that processes streaming data with 99.9% reliability.
-                    </p>
+                    <p class="project-description">Cloud-based pipeline processing streaming data.</p>
                     <div class="project-tech">
                         <span class="tech-tag">AWS</span>
                         <span class="tech-tag">Kafka</span>
                         <span class="tech-tag">Spark</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://github.com/langat01/real-time-data-pipeline" 
+                        <!-- CHANGED: Direct link to your repository -->
+                        <a href="https://github.com/langat01/langat01.github.io/tree/main/projects/data-pipeline" 
                            class="project-link" 
-                           target="_blank"
-                           aria-label="View Data Pipeline Code">
+                           target="_blank">
                             <i class="fab fa-github"></i> Code
                         </a>
-                        <a href="https://raw.githubusercontent.com/langat01/real-time-data-pipeline/main/architecture.png" 
+                        <!-- CHANGED: Direct image link -->
+                        <a href="https://raw.githubusercontent.com/langat01/langat01.github.io/main/projects/data-pipeline/architecture.png" 
                            class="project-link" 
-                           target="_blank"
-                           aria-label="View Architecture Diagram">
+                           target="_blank">
                             <i class="fas fa-diagram-project"></i> Architecture
                         </a>
                     </div>
                 </div>
             </div>
-
         </div>
     </main>
 
     <footer>
-        <p>&copy; <span id="current-year">2023</span> Weldon Langat. All rights reserved.</p>
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Weldon Langat</p>
         <div class="social-links">
-            <a href="https://github.com/langat01" target="_blank" aria-label="GitHub Profile">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://linkedin.com/in/weldonlangat" target="_blank" aria-label="LinkedIn Profile">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="mailto:langatweldon655@gmail.com" aria-label="Email Contact">
-                <i class="fas fa-envelope"></i>
-            </a>
+            <a href="https://github.com/langat01" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/weldonlangat" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:langatweldon655@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
     </footer>
 
     <script src="scripts/main.js"></script>
-    <script>
-        // Auto-update copyright year
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-        
-        // Add loading indicators for project links
-        document.querySelectorAll('.project-link').forEach(link => {
-            link.addEventListener('click', function() {
-                const originalText = this.innerHTML;
-                this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Loading...';
-                setTimeout(() => {
-                    this.innerHTML = originalText;
-                }, 3000);
-            });
-        });
-    </script>
 </body>
 </html>
