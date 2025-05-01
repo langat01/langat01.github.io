@@ -8,7 +8,6 @@ This is my personal portfolio website showcasing my work as a Data Science Speci
 
 - Responsive design that works on all devices
 - Modern UI with gradient effects
-- Interactive chatbot assistant
 - Project showcase section
 - Detailed resume with education and experience
 - Contact form with professional email
