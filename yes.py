@@ -15,7 +15,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for better styling
+# Custom CSS
 st.markdown("""
 <style>
     .metric-card {
@@ -47,36 +47,34 @@ st.markdown("""
 
 # Title and description
 st.title("✈️ Turbofan Engine Predictive Maintenance Dashboard")
-st.markdown("""
-Predict equipment failures before they occur using NASA's Turbofan Engine Degradation Simulation Data.
-""")
+st.markdown("Predict equipment failures before they occur using NASA's Turbofan Engine Degradation Simulation Data.")
 
 # Data loading and preprocessing
 @st.cache_data
-def load_and_preprocess():
+def load_and_preprocess(uploaded_file):
     try:
-        # Load NASA turbofan dataset
-        file_path = "train_FD001.txt"
-        df = pd.read_csv(file_path, sep="\s+", header=None, engine='python').dropna(axis=1)
-        
-        # Add column names (NASA format)
+        if uploaded_file is not None:
+            df = pd.read_csv(uploaded_file, sep="\s+", header=None, engine='python').dropna(axis=1)
+        else:
+            file_path = "train_FD001.txt"
+            df = pd.read_csv(file_path, sep="\s+", header=None, engine='python').dropna(axis=1)
+
+        # Add column names
         columns = ["engine_id", "cycle", "op_setting1", "op_setting2", "op_setting3"] + \
                 [f"sensor_{i:02d}" for i in range(1, 22)]
         df.columns = columns[:len(df.columns)]
-        
-        # Calculate RUL (Remaining Useful Life)
+
+        # RUL calculation
         max_cycle = df.groupby('engine_id')['cycle'].max().rename('max_cycle')
         df = df.merge(max_cycle, left_on='engine_id', right_index=True)
         df['RUL'] = df['max_cycle'] - df['cycle']
-        
-        # Label failures (1 if RUL <= 30, else 0)
         df['failure'] = (df['RUL'] <= 30).astype(int)
-        
-        # Select important sensors (based on NASA research)
+
+        # Important sensors
         important_sensors = [f"sensor_{i:02d}" for i in [2,3,4,7,8,9,11,12,13,14,15,17,20,21]]
-        
+
         return df, important_sensors
-    
+
     except Exception as e:
         st.error(f"Error loading data: {str(e)}")
         return None, None
@@ -96,13 +94,17 @@ def train_model(X_train, y_train):
 
 # Main application
 def main():
-    # Load and preprocess data
+    # Sidebar upload
+    st.sidebar.markdown("### Upload Engine Data")
+    uploaded_file = st.sidebar.file_uploader("Upload train_FD001.txt file", type=["txt"])
+
+    # Load and preprocess
     with st.spinner('Loading and preprocessing engine data...'):
-        df, important_sensors = load_and_preprocess()
-        
+        df, important_sensors = load_and_preprocess(uploaded_file)
+
         if df is None:
             st.stop()
-        
+
         X = df[important_sensors]
         y = df['failure']
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
@@ -111,14 +113,12 @@ def main():
     with st.spinner('Training predictive model...'):
         model = train_model(X_train, y_train)
         accuracy = model.score(X_test, y_test)
-    
-    # Main dashboard layout
+
+    # Dashboard Tabs
     tab1, tab2, tab3 = st.tabs(["📊 Dashboard", "🔍 Engine Inspector", "⚙️ Data & Model"])
 
     with tab1:
         st.header("Fleet Health Overview")
-        
-        # Metrics row
         col1, col2, col3 = st.columns(3)
         with col1:
             st.metric("Total Engines", len(df['engine_id'].unique()))
@@ -126,10 +126,8 @@ def main():
             st.metric("Failure Rate", f"{df['failure'].mean()*100:.1f}%")
         with col3:
             st.metric("Model Accuracy", f"{accuracy*100:.1f}%")
-        
-        # Visualizations
+
         fig_col1, fig_col2 = st.columns(2)
-        
         with fig_col1:
             st.subheader("Failure Distribution")
             fig1, ax1 = plt.subplots()
@@ -142,7 +140,7 @@ def main():
             )
             ax1.set_ylabel('')
             st.pyplot(fig1)
-        
+
         with fig_col2:
             st.subheader("Remaining Useful Life")
             fig2, ax2 = plt.subplots()
@@ -152,7 +150,7 @@ def main():
             ax2.set_ylabel('Engine Count')
             ax2.legend()
             st.pyplot(fig2)
-        
+
         st.subheader("Critical Sensor Importance")
         fig3, ax3 = plt.subplots(figsize=(10, 6))
         sorted_idx = model.feature_importances_.argsort()
@@ -166,20 +164,13 @@ def main():
 
     with tab2:
         st.header("Individual Engine Analysis")
-        
-        # Engine selection
-        engine_id = st.selectbox(
-            "Select Engine ID",
-            options=sorted(df['engine_id'].unique()),
-            index=0
-        )
-        
+        engine_id = st.selectbox("Select Engine ID", options=sorted(df['engine_id'].unique()), index=0)
+
         if engine_id:
             engine_data = df[df['engine_id'] == engine_id].iloc[-1]
             prediction = model.predict([engine_data[important_sensors]])[0]
             proba = model.predict_proba([engine_data[important_sensors]])[0][1]
-            
-            # Status card
+
             if prediction:
                 alert_class = "danger"
                 status = "IMMINENT FAILURE"
@@ -193,7 +184,7 @@ def main():
                     alert_class = "safe"
                     status = "NORMAL"
                     suggestion = "No action required"
-            
+
             st.markdown(
                 f"""
                 <div class="prediction-alert {alert_class}">
@@ -204,8 +195,7 @@ def main():
                 """,
                 unsafe_allow_html=True
             )
-            
-            # Metrics
+
             col1, col2, col3 = st.columns(3)
             with col1:
                 st.metric("Current Cycle", engine_data['cycle'])
@@ -213,8 +203,7 @@ def main():
                 st.metric("Remaining Useful Life", f"{int(engine_data['RUL'])} cycles")
             with col3:
                 st.metric("Operation Settings", f"{engine_data['op_setting1']:.1f}")
-            
-            # Sensor trends
+
             st.subheader("Sensor Trends")
             engine_history = df[df['engine_id'] == engine_id]
             selected_sensors = st.multiselect(
@@ -222,7 +211,7 @@ def main():
                 options=important_sensors,
                 default=important_sensors[:3]
             )
-            
+
             if selected_sensors:
                 fig4, ax4 = plt.subplots(figsize=(10, 5))
                 for sensor in selected_sensors:
@@ -236,7 +225,6 @@ def main():
 
     with tab3:
         st.header("Data & Model Management")
-        
         st.subheader("Export Data")
         st.download_button(
             label="Download Processed Data (CSV)",
@@ -244,20 +232,19 @@ def main():
             file_name="turbofan_engine_data.csv",
             mime="text/csv"
         )
-        
+
         st.subheader("Export Model")
-        # Save model to bytes
         model_bytes = BytesIO()
         joblib.dump(model, model_bytes)
         model_bytes.seek(0)
-        
+
         st.download_button(
             label="Download Trained Model (PKL)",
             data=model_bytes,
             file_name="turbofan_failure_model.pkl",
             mime="application/octet-stream"
         )
-        
+
         st.subheader("Model Information")
         st.json({
             "model_type": "Random Forest Classifier",
