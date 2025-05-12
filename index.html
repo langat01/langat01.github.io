@@ -1,336 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome Langat | Data Scientist & ML Engineer</title>
-    <meta name="description" content="Professional portfolio of Weldon Langat, Data Scientist specializing in Python, Machine Learning and Cloud Technologies">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weldon Langat | Data Scientist</title>
+    <meta name="description" content="Portfolio of Weldon Langat, a data scientist and ML enthusiast." />
+    <meta property="og:title" content="Weldon Langat | Data Scientist">
+    <meta property="og:description" content="Portfolio of Weldon Langat, ML Engineer specializing in Python & Cloud.">
+    <meta property="og:image" content="link-to-preview.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
     <style>
-        :root {
-            --primary: #7e22ce; /* Changed from blue to purple */
-            --secondary: #1e293b;
-            --accent: #10b981; /* Changed from orange to green */
-            --light: #ffffff; /* Changed from off-white to pure white */
-            --dark: #0f172a;
-        }
-        body {
-            font-family: 'Poppins', sans-serif;
-            line-height: 1.6;
-            color: var(--dark);
-            background-color: var(--light);
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background: var(--primary); /* Changed from white to purple */
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        nav ul {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            padding: 1.5rem;
-            margin: 0;
-            list-style: none;
-        }
-        nav a {
-            text-decoration: none;
-            color: white; /* Changed from dark to white for better contrast on purple */
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-        nav a:hover, nav a.active {
-            color: var(--accent); /* Changed hover color to green */
-        }
-        .hero {
-            text-align: center;
-            padding: 5rem 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        .hero h2 {
-            font-size: 1.5rem;
-            color: var(--primary); /* Now purple */
-            margin-bottom: 1.5rem;
-        }
-        .tagline {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: var(--secondary);
-        }
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-bottom: 3rem;
-        }
-        .btn {
-            padding: 0.8rem 1.5rem;
-            border-radius: 4px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-        .btn-primary {
-            background: var(--primary); /* Now purple */
-            color: white;
-        }
-        .btn-primary:hover {
-            background: #6b21a8; /* Darker purple */
-            transform: translateY(-2px);
-        }
-        .btn-secondary {
-            border: 2px solid var(--primary); /* Now purple */
-            color: var(--primary); /* Now purple */
-        }
-        .btn-secondary:hover {
-            background: var(--primary); /* Now purple */
-            color: white;
-        }
-        .skills-icons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            font-size: 2rem;
-        }
-        .skills-icons a {
-            color: var(--secondary);
-            transition: all 0.3s;
-        }
-        .skills-icons a:hover {
-            color: var(--primary); /* Now purple */
-            transform: scale(1.2);
-        }
-        section {
-            padding: 4rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: var(--secondary);
-        }
-        .work-section {
-            margin-bottom: 4rem;
-        }
-        .project-highlight {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            background: white;
-            border-radius: 8px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        .project-highlight img {
-            width: 100%;
-            border-radius: 4px;
-            object-fit: cover;
-            height: 200px;
-        }
-        .btn-small {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background: var(--primary); /* Now purple */
-            color: white;
-            border-radius: 4px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.3s;
-        }
-        .btn-small:hover {
-            background: #6b21a8; /* Darker purple */
-        }
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        .skill-category {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background: var(--secondary);
-            color: white;
-        }
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 1rem;
-            font-size: 1.5rem;
-        }
-        .social-links a {
-            color: white;
-            transition: all 0.3s;
-        }
-        .social-links a:hover {
-            color: var(--accent); /* Now green */
-        }
-        @media (max-width: 768px) {
-            .project-highlight {
-                grid-template-columns: 1fr;
-            }
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            .btn {
-                width: 100%;
-                text-align: center;
-            }
-        }
+      nav a:hover {
+        background: rgba(37, 99, 235, 0.1);
+        border-radius: 4px;
+        padding: 0.2rem 0.5rem;
+      }
+      nav a.active {
+        border-bottom: 2px solid var(--primary);
+      }
+      .btn-primary:hover,
+      .btn-secondary:hover {
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">🏠 Home</a></li>
-                <li><a href="projects.html" class="active">🧬 Projects</a></li>
-                <li><a href="resume.html" class="active">📄 Resume</a></li>
-                <li><a href="contact.html" class="active">📨 Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section class="hero">
-            <h1>Hi there!, Welcome to my Personal Website <span style="color: var(--primary)">I'M Langat</span></h1>
-            <h2>Data Scientist & ML Engineer</h2>
-            <p class="tagline">Transforming raw data into intelligent solutions with Python, Machine Learning, and Cloud Technologies.</p>
-            <div class="cta-buttons">
-                <a href="projects.html" class="btn-primary">🚀 View My Work</a>
-                <a href="contact.html" class="btn-secondary">💌 Contact Me</a>
-            </div>
-            <div class="skills-icons">
-                <a href="#skills" title="Python" aria-label="Python"><i class="fab fa-python"></i></a>
-                <a href="#skills" title="SQL" aria-label="SQL"><i class="fas fa-database"></i></a>
-                <a href="#skills" title="Machine Learning" aria-label="Machine Learning"><i class="fas fa-brain"></i></a>
-                <a href="https://github.com/langat01" target="_blank" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/weldon-langat-60bbb5364" target="_blank" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </section>
-
-        <section class="my-work" id="my-work">
-            <h2>My Work</h2>
-            
-            <div class="work-section">
-                <h3>Featured Projects</h3>
-                <div class="project-highlight">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Data Science Project">
-                    <div>
-                        <h4>Loan Approval Predictor</h4>
-                        <p>Machine learning model with 95% accuracy using Random Forest and feature engineering. Reduced false positives by 30% compared to traditional methods.</p>
-                        <a href="projects.html" class="btn-small">View Project</a>
-                    </div>
-                </div>
-                
-                <div class="project-highlight">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Data Analysis Project">
-                    <div>
-                        <h4>Customer Segmentation</h4>
-                        <p>K-means clustering analysis for targeted marketing campaigns. Identified 5 distinct customer personas with 92% silhouette score.</p>
-                        <a href="projects.html" class="btn-small">View Project</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="work-section">
-                <h3>Resume Highlights</h3>
-                <div class="project-highlight" style="grid-template-columns: 1fr;">
-                    <div>
-                        <h4>📈 Data Scientist</h4>
-                        <p>1+ years experience building ML models</p>
-                        <ul>
-                            <li>Python, TensorFlow, PyTorch, AWS SageMaker</li>
-                            <li>Data pipeline optimization (reduced processing time by 40%)</li>
-                            <li>Natural Language Processing (NLP) applications</li>
-                        </ul>
-                        <a href="resume.html" class="btn-small">View Full Resume</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="about" id="about">
-            <h2>About Me</h2>
-            <p>I'm a passionate data science professional with expertise in Python, machine learning algorithms, and cloud-based data solutions. I specialize in turning complex data into actionable insights that drive business decisions.</p>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h4><i class="fas fa-chart-line"></i> Data Science</h4>
-                    <ul>
-                        <li>Python (Pandas, NumPy, Scikit-learn)</li>
-                        <li>Machine Learning (Supervised/Unsupervised)</li>
-                        <li>Data Visualization (Matplotlib, Seaborn, Plotly)</li>
-                        <li>Statistical Analysis</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4><i class="fas fa-cloud"></i> Cloud Technologies</h4>
-                    <ul>
-                        <li>AWS (SageMaker, S3, Lambda)</li>
-                        <li>Google Cloud (BigQuery, Vertex AI)</li>
-                        <li>Azure Machine Learning</li>
-                        <li>Docker & Kubernetes</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h4><i class="fas fa-cogs"></i> Other Skills</h4>
-                    <ul>
-                        <li>SQL (PostgreSQL, MySQL)</li>
-                        <li>Big Data (Spark, Hadoop)</li>
-                        <li>Data Pipelines (Airflow, Luigi)</li>
-                        <li>Git & CI/CD</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <footer>
-        <p>&copy; 2023 Weldon Langat. All rights reserved.</p>
-        <div class="social-links">
-            <a href="https://github.com/langat01" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/weldon-langat-60bbb5364" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:langatweldon665@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <div class="container">
+        <h1>Hi there! Welcome to my personal website — <span style="color: var(--primary)">I'm Langat</span></h1>
+        <p>
+          I'm a data scientist and machine learning enthusiast with a passion for uncovering insights and building smart systems.
+        </p>
+        <div class="btn-group">
+          <a href="resume.html" class="btn-primary">View Resume</a>
+          <a href="projects.html" class="btn-secondary">View Projects</a>
         </div>
-    </footer>
-    
-    <script>
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+      </div>
+    </header>
 
-        // Mobile menu toggle (can be added later)
-        // function toggleMenu() {
-        //     const nav = document.querySelector('nav ul');
-        //     nav.classList.toggle('active');
-        // }
-    </script>
-</body>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active" aria-label="Go to Home">Home</a></li>
+        <li><a href="projects.html" aria-label="Go to Projects">Projects</a></li>
+        <li><a href="resume.html" aria-label="Go to Resume">Resume</a></li>
+        <li><a href="certificates.html" aria-label="Go to Certificates">Certificates</a></li>
+        <li><a href="contact.html" aria-label="Go to Contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section class="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          My name is Weldon Langat. I recently completed my studies in Computer Science and I'm awaiting graduation in July 2025.
+        </p>
+        <p>
+          I specialize in data analysis, machine learning, and building intelligent systems using Python and cloud tools.
+        </p>
+      </div>
+    </section>
+
+    <section class="highlights">
+      <div class="container">
+        <h2>Resume Highlights</h2>
+        <div class="highlight-grid">
+          <div class="highlight">
+            <h3>Education</h3>
+            <p>BSc Computer Science — Murang'a University of Technology</p>
+          </div>
+          <div class="highlight">
+            <h3>Skills</h3>
+            <ul>
+              <li><i class="fas fa-check-circle"></i> Python (Pandas, NumPy)</li>
+              <li><i class="fas fa-check-circle"></i> Machine Learning</li>
+              <li><i class="fas fa-check-circle"></i> Data Visualization</li>
+              <li><i class="fas fa-check-circle"></i> SQL & Databases</li>
+              <li><i class="fas fa-check-circle"></i> Cloud Platforms (GCP, AWS)</li>
+            </ul>
+          </div>
+          <div class="highlight">
+            <h3>Projects</h3>
+            <ul>
+              <li><i class="fas fa-laptop-code"></i> Excel to MySQL Desktop App</li>
+              <li><i class="fas fa-robot"></i> WhatsApp Chatbot</li>
+              <li><i class="fas fa-chart-bar"></i> Data Analysis for Sales Trends</li>
+              <li><i class="fas fa-database"></i> Inventory System in MySQL</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Weldon Langat. All rights reserved.</p>
+        <div class="social-icons">
+          <a href="mailto:langatweldon665@gmail.com" aria-label="Email Weldon Langat"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/weldonlangat" target="_blank" aria-label="Visit LinkedIn profile"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/langat-weldon" target="_blank" aria-label="Visit GitHub profile"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
