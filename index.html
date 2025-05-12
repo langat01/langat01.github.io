@@ -10,10 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #2563eb;
+            --primary: #7e22ce; /* Changed from blue to purple */
             --secondary: #1e293b;
-            --accent: #f59e0b;
-            --light: #f8fafc;
+            --accent: #10b981; /* Changed from orange to green */
+            --light: #ffffff; /* Changed from off-white to pure white */
             --dark: #0f172a;
         }
         body {
@@ -25,7 +25,7 @@
             padding: 0;
         }
         header {
-            background: white;
+            background: var(--primary); /* Changed from white to purple */
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
@@ -41,12 +41,12 @@
         }
         nav a {
             text-decoration: none;
-            color: var(--secondary);
+            color: white; /* Changed from dark to white for better contrast on purple */
             font-weight: 600;
             transition: color 0.3s;
         }
         nav a:hover, nav a.active {
-            color: var(--primary);
+            color: var(--accent); /* Changed hover color to green */
         }
         .hero {
             text-align: center;
@@ -60,7 +60,7 @@
         }
         .hero h2 {
             font-size: 1.5rem;
-            color: var(--primary);
+            color: var(--primary); /* Now purple */
             margin-bottom: 1.5rem;
         }
         .tagline {
@@ -82,19 +82,19 @@
             transition: all 0.3s;
         }
         .btn-primary {
-            background: var(--primary);
+            background: var(--primary); /* Now purple */
             color: white;
         }
         .btn-primary:hover {
-            background: #1d4ed8;
+            background: #6b21a8; /* Darker purple */
             transform: translateY(-2px);
         }
         .btn-secondary {
-            border: 2px solid var(--primary);
-            color: var(--primary);
+            border: 2px solid var(--primary); /* Now purple */
+            color: var(--primary); /* Now purple */
         }
         .btn-secondary:hover {
-            background: var(--primary);
+            background: var(--primary); /* Now purple */
             color: white;
         }
         .skills-icons {
@@ -108,7 +108,7 @@
             transition: all 0.3s;
         }
         .skills-icons a:hover {
-            color: var(--primary);
+            color: var(--primary); /* Now purple */
             transform: scale(1.2);
         }
         section {
@@ -144,7 +144,7 @@
         .btn-small {
             display: inline-block;
             padding: 0.5rem 1rem;
-            background: var(--primary);
+            background: var(--primary); /* Now purple */
             color: white;
             border-radius: 4px;
             text-decoration: none;
@@ -152,7 +152,7 @@
             transition: all 0.3s;
         }
         .btn-small:hover {
-            background: #1d4ed8;
+            background: #6b21a8; /* Darker purple */
         }
         .skills-container {
             display: grid;
@@ -183,7 +183,7 @@
             transition: all 0.3s;
         }
         .social-links a:hover {
-            color: var(--accent);
+            color: var(--accent); /* Now green */
         }
         @media (max-width: 768px) {
             .project-highlight {
@@ -201,6 +201,136 @@
     </style>
 </head>
 <body>
-<!-- Document content remains unchanged -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">🏠 Home</a></li>
+                <li><a href="projects.html" class="active">🧬 Projects</a></li>
+                <li><a href="resume.html" class="active">📄 Resume</a></li>
+                <li><a href="contact.html" class="active">📨 Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>Hi there!, Welcome to my Personal Website <span style="color: var(--primary)">I'M Langat</span></h1>
+            <h2>Data Scientist & ML Engineer</h2>
+            <p class="tagline">Transforming raw data into intelligent solutions with Python, Machine Learning, and Cloud Technologies.</p>
+            <div class="cta-buttons">
+                <a href="projects.html" class="btn-primary">🚀 View My Work</a>
+                <a href="contact.html" class="btn-secondary">💌 Contact Me</a>
+            </div>
+            <div class="skills-icons">
+                <a href="#skills" title="Python" aria-label="Python"><i class="fab fa-python"></i></a>
+                <a href="#skills" title="SQL" aria-label="SQL"><i class="fas fa-database"></i></a>
+                <a href="#skills" title="Machine Learning" aria-label="Machine Learning"><i class="fas fa-brain"></i></a>
+                <a href="https://github.com/langat01" target="_blank" title="GitHub" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/weldon-langat-60bbb5364" target="_blank" title="LinkedIn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </section>
+
+        <section class="my-work" id="my-work">
+            <h2>My Work</h2>
+            
+            <div class="work-section">
+                <h3>Featured Projects</h3>
+                <div class="project-highlight">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Data Science Project">
+                    <div>
+                        <h4>Loan Approval Predictor</h4>
+                        <p>Machine learning model with 95% accuracy using Random Forest and feature engineering. Reduced false positives by 30% compared to traditional methods.</p>
+                        <a href="projects.html" class="btn-small">View Project</a>
+                    </div>
+                </div>
+                
+                <div class="project-highlight">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" alt="Data Analysis Project">
+                    <div>
+                        <h4>Customer Segmentation</h4>
+                        <p>K-means clustering analysis for targeted marketing campaigns. Identified 5 distinct customer personas with 92% silhouette score.</p>
+                        <a href="projects.html" class="btn-small">View Project</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="work-section">
+                <h3>Resume Highlights</h3>
+                <div class="project-highlight" style="grid-template-columns: 1fr;">
+                    <div>
+                        <h4>📈 Data Scientist</h4>
+                        <p>1+ years experience building ML models</p>
+                        <ul>
+                            <li>Python, TensorFlow, PyTorch, AWS SageMaker</li>
+                            <li>Data pipeline optimization (reduced processing time by 40%)</li>
+                            <li>Natural Language Processing (NLP) applications</li>
+                        </ul>
+                        <a href="resume.html" class="btn-small">View Full Resume</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="about" id="about">
+            <h2>About Me</h2>
+            <p>I'm a passionate data science professional with expertise in Python, machine learning algorithms, and cloud-based data solutions. I specialize in turning complex data into actionable insights that drive business decisions.</p>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h4><i class="fas fa-chart-line"></i> Data Science</h4>
+                    <ul>
+                        <li>Python (Pandas, NumPy, Scikit-learn)</li>
+                        <li>Machine Learning (Supervised/Unsupervised)</li>
+                        <li>Data Visualization (Matplotlib, Seaborn, Plotly)</li>
+                        <li>Statistical Analysis</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-cloud"></i> Cloud Technologies</h4>
+                    <ul>
+                        <li>AWS (SageMaker, S3, Lambda)</li>
+                        <li>Google Cloud (BigQuery, Vertex AI)</li>
+                        <li>Azure Machine Learning</li>
+                        <li>Docker & Kubernetes</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4><i class="fas fa-cogs"></i> Other Skills</h4>
+                    <ul>
+                        <li>SQL (PostgreSQL, MySQL)</li>
+                        <li>Big Data (Spark, Hadoop)</li>
+                        <li>Data Pipelines (Airflow, Luigi)</li>
+                        <li>Git & CI/CD</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Weldon Langat. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com/langat01" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/weldon-langat-60bbb5364" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:langatweldon665@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+    </footer>
+    
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle (can be added later)
+        // function toggleMenu() {
+        //     const nav = document.querySelector('nav ul');
+        //     nav.classList.toggle('active');
+        // }
+    </script>
 </body>
 </html>
