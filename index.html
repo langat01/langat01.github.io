@@ -4,104 +4,204 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weldon Langat | Data Scientist</title>
-    <meta name="description" content="Portfolio of Weldon Langat, a data scientist and ML enthusiast." />
-    <meta property="og:title" content="Weldon Langat | Data Scientist">
-    <meta property="og:description" content="Portfolio of Weldon Langat, ML Engineer specializing in Python & Cloud.">
-    <meta property="og:image" content="link-to-preview.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
     <style>
-      nav a:hover {
-        background: rgba(37, 99, 235, 0.1);
-        border-radius: 4px;
-        padding: 0.2rem 0.5rem;
+      :root {
+        --primary: #2563eb;
+        --bg: #f9fafb;
+        --text: #1f2937;
+        --light: #ffffff;
+        --gray: #6b7280;
       }
-      nav a.active {
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.6;
+      }
+      header {
+        background: var(--primary);
+        color: var(--light);
+        padding: 4rem 1rem;
+        text-align: center;
+      }
+      header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+      header p {
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      nav {
+        background: var(--light);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        padding: 1rem;
+        text-align: center;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+      }
+      nav a {
+        text-decoration: none;
+        color: var(--gray);
+        font-weight: 600;
+        transition: color 0.3s, border-bottom 0.3s;
+      }
+      nav a:hover, nav a.active {
+        color: var(--primary);
         border-bottom: 2px solid var(--primary);
       }
-      .btn-primary:hover,
-      .btn-secondary:hover {
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      .btn-group {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
+      .btn-primary, .btn-secondary {
+        text-decoration: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: background 0.3s, transform 0.2s;
+      }
+      .btn-primary {
+        background: var(--light);
+        color: var(--primary);
+        border: 2px solid var(--light);
+      }
+      .btn-secondary {
+        background: transparent;
+        color: var(--light);
+        border: 2px solid var(--light);
+      }
+      .btn-primary:hover, .btn-secondary:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: scale(1.05);
+      }
+      section {
+        padding: 4rem 1rem;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      section h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        color: var(--primary);
+        text-align: center;
+      }
+      .highlight-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+      }
+      .highlight {
+        background: var(--light);
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      }
+      .highlight h3 {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        color: var(--primary);
+      }
+      .highlight ul {
+        padding-left: 1rem;
+      }
+      .highlight ul li {
+        margin-bottom: 0.5rem;
+      }
+      footer {
+        background: var(--primary);
+        color: var(--light);
+        padding: 2rem 1rem;
+        text-align: center;
+      }
+      .social-icons a {
+        color: var(--light);
+        margin: 0 0.5rem;
+        font-size: 1.2rem;
+        transition: color 0.3s;
+      }
+      .social-icons a:hover {
+        color: #cbd5e1;
       }
     </style>
   </head>
   <body>
     <header>
-      <div class="container">
-        <h1>Hi there! Welcome to my personal website — <span style="color: var(--primary)">I'm Langat</span></h1>
-        <p>
-          I'm a data scientist and machine learning enthusiast with a passion for uncovering insights and building smart systems.
-        </p>
-        <div class="btn-group">
-          <a href="resume.html" class="btn-primary">View Resume</a>
-          <a href="projects.html" class="btn-secondary">View Projects</a>
-        </div>
+      <h1>Hello! I'm <span style="color: #fff; font-weight: 700;">Weldon Langat</span></h1>
+      <p>A passionate Data Scientist and Machine Learning enthusiast building solutions that matter.</p>
+      <div class="btn-group">
+        <a href="resume.html" class="btn-primary">View Resume</a>
+        <a href="projects.html" class="btn-secondary">View Projects</a>
       </div>
     </header>
 
     <nav>
       <ul>
-        <li><a href="index.html" class="active" aria-label="Go to Home">Home</a></li>
-        <li><a href="projects.html" aria-label="Go to Projects">Projects</a></li>
-        <li><a href="resume.html" aria-label="Go to Resume">Resume</a></li>
-        <li><a href="certificates.html" aria-label="Go to Certificates">Certificates</a></li>
-        <li><a href="contact.html" aria-label="Go to Contact">Contact</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
 
     <section class="about">
-      <div class="container">
-        <h2>About Me</h2>
-        <p>
-          My name is Weldon Langat. I recently completed my studies in Computer Science and I'm awaiting graduation in July 2025.
-        </p>
-        <p>
-          I specialize in data analysis, machine learning, and building intelligent systems using Python and cloud tools.
-        </p>
-      </div>
+      <h2>About Me</h2>
+      <p style="text-align: center;">
+        I'm a Computer Science graduate from Murang'a University of Technology. I specialize in data analysis, Python programming, and building intelligent systems using machine learning and cloud tools.
+      </p>
     </section>
 
     <section class="highlights">
-      <div class="container">
-        <h2>Resume Highlights</h2>
-        <div class="highlight-grid">
-          <div class="highlight">
-            <h3>Education</h3>
-            <p>BSc Computer Science — Murang'a University of Technology</p>
-          </div>
-          <div class="highlight">
-            <h3>Skills</h3>
-            <ul>
-              <li><i class="fas fa-check-circle"></i> Python (Pandas, NumPy)</li>
-              <li><i class="fas fa-check-circle"></i> Machine Learning</li>
-              <li><i class="fas fa-check-circle"></i> Data Visualization</li>
-              <li><i class="fas fa-check-circle"></i> SQL & Databases</li>
-              <li><i class="fas fa-check-circle"></i> Cloud Platforms (GCP, AWS)</li>
-            </ul>
-          </div>
-          <div class="highlight">
-            <h3>Projects</h3>
-            <ul>
-              <li><i class="fas fa-laptop-code"></i> Excel to MySQL Desktop App</li>
-              <li><i class="fas fa-robot"></i> WhatsApp Chatbot</li>
-              <li><i class="fas fa-chart-bar"></i> Data Analysis for Sales Trends</li>
-              <li><i class="fas fa-database"></i> Inventory System in MySQL</li>
-            </ul>
-          </div>
+      <h2>Resume Highlights</h2>
+      <div class="highlight-grid">
+        <div class="highlight">
+          <h3>Education</h3>
+          <p>BSc Computer Science — Murang'a University of Technology</p>
+        </div>
+        <div class="highlight">
+          <h3>Skills</h3>
+          <ul>
+            <li><i class="fas fa-check-circle"></i> Python (Pandas, NumPy)</li>
+            <li><i class="fas fa-check-circle"></i> Machine Learning</li>
+            <li><i class="fas fa-check-circle"></i> Data Visualization</li>
+            <li><i class="fas fa-check-circle"></i> SQL & Databases</li>
+            <li><i class="fas fa-check-circle"></i> Cloud Platforms (GCP, AWS)</li>
+          </ul>
+        </div>
+        <div class="highlight">
+          <h3>Projects</h3>
+          <ul>
+            <li><i class="fas fa-laptop-code"></i> Excel to MySQL Desktop App</li>
+            <li><i class="fas fa-robot"></i> WhatsApp Chatbot</li>
+            <li><i class="fas fa-chart-bar"></i> Sales Data Analysis</li>
+            <li><i class="fas fa-database"></i> Inventory System in MySQL</li>
+          </ul>
         </div>
       </div>
     </section>
 
     <footer>
-      <div class="container">
-        <p>&copy; 2025 Weldon Langat. All rights reserved.</p>
-        <div class="social-icons">
-          <a href="mailto:langatweldon665@gmail.com" aria-label="Email Weldon Langat"><i class="fas fa-envelope"></i></a>
-          <a href="https://www.linkedin.com/in/weldonlangat" target="_blank" aria-label="Visit LinkedIn profile"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/langat-weldon" target="_blank" aria-label="Visit GitHub profile"><i class="fab fa-github"></i></a>
-        </div>
+      <p>&copy; 2025 Weldon Langat. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="mailto:langatweldon665@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/weldonlangat" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/langat-weldon" target="_blank"><i class="fab fa-github"></i></a>
       </div>
     </footer>
   </body>
