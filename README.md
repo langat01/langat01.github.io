@@ -1,6 +1,7 @@
 # Weldon Langat - Personal Portfolio
 
 ![Portfolio Screenshot](./screenshot.png)
+![Additional Screenshot](./image.png)
 
 This is my personal portfolio website showcasing my work as a Data Science Specialist.
 
